@@ -50,7 +50,7 @@
   <br>
 
 <p>Not already registered? Want some advices?</p>
-<p>Click here: <a href="New.html"> New page </a> </p>
+<p>Click here: <a href="pinscription.php"> New page </a> </p>
 
 
 
