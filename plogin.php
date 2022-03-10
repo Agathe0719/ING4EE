@@ -1,7 +1,7 @@
 <!-- Verif que la connection fonctionne bien -->
 
 <?php
-$nbline='a';
+$nbline=0;
     if(isset($_POST['submitConnexion']))
     {
         include("connexion.php");
@@ -12,9 +12,14 @@ $nbline='a';
         // Pour tchequer toutes les lignes de la tab user
         //for($int i =0; $i<15; $i++)
     echo 'lolo';
-    $query = "SELECT COUNT(*) FROM user WHERE Company_Name='$nomConnexion' ";
-    $nbline = $con ->query($query);
-     // $nbline=mysqli_query($con, "SELECT COUNT(*) FROM user WHERE Company_Name='$nomConnexion' ");
+    //$query = "SELECT COUNT(*) FROM user WHERE Company_Name='$nomConnexion' ";
+    //$nbline = $con ->query($query);
+
+    $req=mysqli_query($con, "SELECT COUNT(*) as cpt FROM user WHERE Company_Name='$nomConnexion' ");
+    echo mysql_result($req,0);
+    $nbline = $req->fetch();
+    echo $nbline['cpt'];
+    
     echo '<br>lulu</br>';
     
       echo $nbline;
