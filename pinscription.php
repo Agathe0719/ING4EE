@@ -1,69 +1,34 @@
+<!-- ca ca sert pas c est pour ecrire sur le html 
 <html>
-<head>
-	<title>
-	</title>
-
-</head>
 <body>
 
-<header>
-        <h1>New on this website? Submit your project!</h1>
-</header>
+Name of the new company <?php echo $_POST["namecompany"]; ?><br>
+Name of the registration : <?php echo $_POST["nameid"]; ?><br>
+His role : <?php echo $_POST["role"]; ?><br>
+His email address is: <?php echo $_POST["newemail"]; ?><br>
+His phone number : <?php echo $_POST["phone"]; ?><br>
 
-<p> What is ACA? a website to help you visualize your company's energy consumption and give you tips to consume less.
-     Don't lose money unnecessarily, and understand where your expenses come from. </p>
-
-
-
-<form action="" method="get" class="form">
-
-  <div class="form">
-  	<label for="company">Enter your company name: </label>
-  	 <input type="text" name="nom" id="nom" required>
-  	 <br>
-  	 <br>
-    <label for="nom">Enter your name: </label>
-    <input type="text" name="nom" id="nom" required>
-    <br>
-  	 <br>
-    <label for="role">Enter your role: </label>
-    <input type="text" name="role" id="role" required>
-  </div>
-<br>
-
-<p>Explain your project and what you expect from us</p>
-<TEXTAREA name="nom" rows=4 cols=40>Type here</TEXTAREA>
-
-<br>
-<br>
-<br>
-
-<p>Enter your contact details, we will call you back</p>
-  <div class="form">
-    <label for="email">Enter your email: </label>
-    <input type="email" name="email" id="email" required>
-    <br>
-    <label for="phone">Enter your Phone number: </label>
-    <input type="text" name="phone" id="phone" required>
-  </div>
-
-<p>Would you like to be added to a mailing list and receive our news?</p>
-
-<div>
-  <input type="checkbox" id="yes" name="yes"
-         checked>
-  <label for="yes">Yes</label>
-</div>
-<br>
-<br>
-  <div class="form">
-    <input type="submit" value="Send">
-  </div>
-
-
-</form>
-<footer>
-</footer>
+Project and expectation : <?php echo $_POST["project"]; ?><br>
 
 </body>
-</html>
+</html>-->
+
+
+<?php
+// permet d'enregistrer valeurs dans le code
+    if(isset($_POST['submitInscription'])){
+        include("connexion.php");
+        session_start();
+
+        $namecompany = $_POST['namecompany'];
+        // $nameid = $_POST['nameid'];
+        $role = $_POST['role'];
+        $newemail = $_POST['newemail'];
+        $phone = $_POST['phone'];
+
+        mysqli_query($con,"INSERT INTO user (Company_Name,Password,Email,Phone) 
+            VALUES ('$namecompany','$role','$newemail','$phone')");
+
+echo "<script language='javascript' type='text/javascript'> location.href='plogin.html'</script>";
+    }
+?>
