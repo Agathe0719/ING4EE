@@ -1,3 +1,9 @@
+<!--<?php 
+ $nomConnexion = $_POST['nomConnexion'];
+ $Password = $_POST['password'];
+
+?>
+  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +30,9 @@
 </nav>
 
 <header>
-    <h1>We analyzed your datas.  Now you can see our graphs advices and solutions.</h1>
+    <h1>Hello company <?php echo $nomConnexion?>. We analyzed your datas.  Now you can see our graphs advices and solutions.</h1>
 </header>
 </section>
-
 
 <footer>
     <h5>Contact us </h5>

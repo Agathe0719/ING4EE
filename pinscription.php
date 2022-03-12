@@ -29,6 +29,6 @@ Project and expectation : <?php echo $_POST["project"]; ?><br>
         mysqli_query($con,"INSERT INTO user (Company_Name,Password,Email,Phone) 
             VALUES ('$namecompany','$role','$newemail','$phone')");
 
-echo "<script language='javascript' type='text/javascript'> location.href='plogin2.php'</script>";
+echo "<script language='javascript' type='text/javascript'> location.href='plogin.php'</script>";
     }
 ?>

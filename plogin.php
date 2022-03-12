@@ -57,30 +57,27 @@ if(isset($_POST['submitConnexion']))
   $nomConnexion = $_POST['nomConnexion'];
   $Password = $_POST['password'];
 
-//Si jamais le mdp et l'id correspondent au sql :
+//Si jamais le mdp et l'id correspondent au sql : $nbline=1 sinon 0
   $sql = mysqli_query($con, "SELECT * FROM user WHERE Company_Name = '$nomConnexion' and Password = '$Password'");
   $nbline = mysqli_num_rows($sql);      
   
   
 // Si la connection est ok, passage à la page suivante, page d'accueil
-  if($nbline==1)//+ remet cpt a 3
+  if($nbline==1)
     {
-    echo "<script language='javascript' type='text/javascript'> location.href='paccueil.html'</script>";
+    echo "<script language='javascript' type='text/javascript'> location.href='paccueil.php'</script>";
     }
 
 //Si pas effective, message Le mdp ou l'utilisateur est incorrect
 else
 {
-  //Relance la page login avec 1 chance en moins pour reussir le code
- //echo "<script language='javascript' type='text/javascript'> location.href='plogin2.php'</script>";
  ?>
- <p>MDP or user name incorrect. Try again</p>
+ <!-- on ferme php car le texte est en html -->
+ <p>MDP incorrect for company <?php echo $nomConnexion?>. Try again</p>
  <?php
 }
 }
 ?>
-
-
   <br>
   <br>
 
