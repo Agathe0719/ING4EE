@@ -65,7 +65,7 @@ if(isset($_POST['submitConnexion']))
 // Si la connection est ok, passage à la page suivante, page d'accueil
   if($nbline==1)//+ remet cpt a 3
     {
-    echo "<script language='javascript' type='text/javascript'> location.href='pinscription.html'</script>";
+    echo "<script language='javascript' type='text/javascript'> location.href='paccueil.html'</script>";
     }
 
 //Si pas effective, message Le mdp ou l'utilisateur est incorrect
