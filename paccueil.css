@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+body{
+    font-family: 'Fredoka', sans-serif;
+    background-color: #161b36;
+    font-size:x-large;
+    padding:0;
+    margin:0;
+    color: rgb(255, 255, 255);
+}
+body.page{
+    margin: 20px 80px;
+}
+nav{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color:#161b36;
+    color:rgb(255, 255, 255);
+    padding: 15px 0px;
+}
+
+nav.onglets{
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 10px;
+}
+nav.onglets.a{
+    margin-right: 35px;
+}
+
+/*header*/
+header{
+    margin top: 30px;
+    background:url('https://cdn.pixabay.com/photo/2013/01/05/20/15/earth-74015_960_720.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:900px;
+
+}
+header h1{
+    font-size: 65px;
+    padding:150px;
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    padding: 30px 110px;
+    background-color: black;
+    font-size: 13px;
+    color: rgba(245, 245, 220, 0.692);
+}
+
+footer .colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
