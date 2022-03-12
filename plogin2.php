@@ -85,7 +85,7 @@ else
   <br>
 
 <p>Not already registered? Want some advices?</p>
-<p>Click here: <a href="pinscription.php"> Inscription </a> </p>
+<p>Click here: <a href="pinscription.html"> Inscription </a> </p>
 
 </form>
 <footer>
