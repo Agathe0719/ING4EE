@@ -1,9 +1,3 @@
-<!--<?php 
- $nomConnexion = $_POST['nomConnexion'];
- $Password = $_POST['password'];
-
-?>
-  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +22,20 @@
         <button class="ceci est un bouton">See graphs of other companies</button>
     </div>
 </nav>
+
+
+<!-- tester si l'utilisateur est connecté -->
+<?php
+                session_start();
+                if($_SESSION['nomConnexion'] !== ""){
+                    $nomConnexion = $_SESSION['nomConnexion'];
+                    // afficher un message
+                    echo "Bonjour $nomConnexion, vous êtes connecté";
+                }
+            ?>
+            
+
+
 
 <header>
     <h1>Hello company <?php echo $nomConnexion?>. We analyzed your datas.  Now you can see our graphs advices and solutions.</h1>
@@ -59,8 +67,6 @@
 <p>Leseche, Martinet, Vittiglio</p>
 
 </footer>
-
-
 
     </body>
 </html>

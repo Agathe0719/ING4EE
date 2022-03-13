@@ -65,6 +65,9 @@ if(isset($_POST['submitConnexion']))
 // Si la connection est ok, passage à la page suivante, page d'accueil
   if($nbline==1)
     {
+    $_SESSION['nomConnexion'] = $nomConnexion;
+    header('Location: pprofil.php');
+    header('Location: paccueil.php');
     echo "<script language='javascript' type='text/javascript'> location.href='paccueil.php'</script>";
     }
 
@@ -73,7 +76,7 @@ else
 {
  ?>
  <!-- on ferme php car le texte est en html -->
- <p>MDP incorrect for company <?php echo $nomConnexion?>. Try again</p>
+ <p style='color:red'> MDP incorrect for company <?php echo $nomConnexion?>. Try again</p>
  <?php
 }
 }
