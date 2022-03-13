@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 body{
     font-family: 'Fredoka', sans-serif;
-    background-color: #ffffff;
+    background-color: #ffff;
     font-size:x-large;
     padding:0;
     margin:0;
@@ -16,7 +16,7 @@ nav{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color:#161b36;
+    background-color:#215828;
     color:rgb(255, 255, 255);
     padding: 15px 0px;
 }
@@ -33,14 +33,14 @@ nav.onglets.a{
 /*header*/
 header{
     margin top: 30px;
-    background:url('https://cdn.pixabay.com/photo/2013/01/05/20/15/earth-74015_960_720.jpg');
+    background:url('https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg');
     background-repeat:no-repeat;
     background-position:center;
     background-size:900px;
 
 }
 header h1{
-    font-size: 65px;
+    font-size: 45px;
     padding:150px;
     text-align: center;
 }

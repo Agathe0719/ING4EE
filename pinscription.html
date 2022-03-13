@@ -1,10 +1,15 @@
 
-
 <html>
 <head>
 	<title>
-	</title>
-
+    Projet
+  </title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content=""width=device=width, initial-scale="1.0">
+  <title>Inscription</title>
+  <link rel="stylesheet" href="pinscription.css">
+  
 </head>
 <body>
 
@@ -12,43 +17,41 @@
         <h1>New on this website? Submit your project!</h1>
 </header>
 
-<p> What is ACA? a website to help you visualize your company's energy consumption and give you tips to consume less.
-     Don't lose money unnecessarily, and understand where your expenses come from. </p>
+<h3> What is ACA? a website to help you visualize your company's energy consumption and give you tips to consume less.
+     Don't lose money unnecessarily, and understand where your expenses come from. </h3>
 
 
 <form action="pinscription.php" method="POST" class="form">
 
   <div class="form">
-  	<label for="company">Enter your company name: </label>
+  	<label for="company">Name of your company: </label>
   	 <input type="text" name="namecompany" id="namecompany" required>
   	 <br>
-  	 <br>
-    <label for="nom">Enter your name: </label>
+    <label for="nom">Name: </label>
     <input type="text" name="nameid" id="nameid" required>
-    <br>
-  	 <br>
-    <label for="role">Enter your role: </label>
-    <input type="text" name="role" id="role" required>
+    
   </div>
-<br>
 
 <p>Explain your project and what you expect from us</p>
 <TEXTAREA name="project" rows=4 cols=40>Type here</TEXTAREA>
 
 <br>
 <br>
-<br>
+
 
 <p>Enter your contact details, we will call you back</p>
   <div class="form">
-    <label for="email">Enter your email: </label>
+    <label for="email">Email: </label>
     <input type="email" name="newemail" id="newemail" required>
     <br>
-    <label for="phone">Enter your Phone number: </label>
+    <label for="phone">Phone number: </label>
     <input type="text" name="phone" id="phone" required>
+    <br>
+    <label for="role">Password: </label>
+    <input type="text" name="role" id="role" required>
   </div>
 
-<p>Would you like to be added to a mailing list and receive our news?</p>
+<p>Would you like to make your datas public?</p>
 
 <div>
   <input type="checkbox" id="yes" name="yes"
