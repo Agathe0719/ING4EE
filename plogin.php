@@ -6,22 +6,27 @@
     </open-files>
 </project-private>
 
-
-<html>
+<html lang="en">
 <head>
-	<title>
+<title>
 	     Projet
 	</title>
 
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width=device=width, initial-scale="1.0">
+	<title>Graphs</title>
+<link rel="stylesheet" href="plogin.css">
+    
+  </head>
+
 <body>
 
 <header>
 	<h1>
 	Welcome to ACA	
-   <p>The website for your energy consumption</p> 
+ 
 	</h1>
-
+<h5> The website for your energy consumption</h5>
 </header>
 
 

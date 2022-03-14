@@ -4,9 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content=""width=device=width, initial-scale="1.0">
-	<title>Accueil</title>
+	<title>Solutions</title>
 <link rel="stylesheet" href="psolution.css">
-
+<style>
+    .flex-container {
+      display: flex;
+    }
+    
+    .flex-container > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 60px;
+    }
+    </style>
 </head>
 <body>
 
@@ -14,9 +25,10 @@
 
 <nav>
     <div class="onglets">
-<a href="pgraphs.html">My Consumption</a>
-<a href="psolution.html">Advices and solutions</a>
-<a href="">My Profile</a>
+        <a href="pgraphs.html" style="color: beige;">My Consumption </a>
+
+        <a href="psolution.html" style="color: beige;">Advices and solutions</a>
+        <a href="plogin.php" style="color: beige;">My Profile</a>
     </div>
     <div class="boutons">
         <button class="ceci est un bouton">See graphs of other companies</button>
@@ -24,22 +36,18 @@
 </nav>
 
 <header>
-    <h1>Solutions</h1>
-    <h2>Use low-energy light bulbs</h2>
-    <h3>Use bay windows to let in the sun during the day</h3>
-    <h4>It will keep the heat inside the room and use less heating. </h4>
-    <h5>Doing insulation work</h5>
-    <h6>Doing a job with better thermal insulation also helps to optimize the use of
-         air conditioning, ventilation and heating, energy sources that are very harmful 
-         to the environment. Good insulation reduces the risk of energy loss and therefore overuse. 
-         In short, thermal insulation reduces the exchange of heat between the interior and exterior.
-        This reduces your final energy consumption in summer and winter.</h6>
+        <div class="flex-container">
+            <div>Solution 1: Earn Money</div>
+            <div>Solution 2: Environment first</div>
+            <div>Solution 3: Both</div>  
+          </div>
+
 </header>
 </section>
 
 
 <footer>
-    <h5>Contact us </h5>
+    <h3>Contact us </h3>
     <div class="colonnes">
     <div class="colonne"> 
         <p>E-mail</p>
@@ -50,7 +58,7 @@
         <p>+33-1-76-45-29-72</p>
     </div>
     <div class="colonne"> 
-        <p>Adress</p>
+        <p>Location</p>
         <p>10 rue Sexius Michel, 75015, Paris</p>
     </div>
     <div class="colonne"> 
@@ -60,7 +68,6 @@
     
 </div>
 
-<p>Leseche, Martinet, Vittiglio</p>
 
 </footer>
     </body>

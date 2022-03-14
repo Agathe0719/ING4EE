@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 body{
     font-family: 'Fredoka', sans-serif;
-    background-color: #161b36;
+    background-color: #ffff;
     font-size:x-large;
     padding:0;
     margin:0;
@@ -16,7 +16,7 @@ nav{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color:#161b36;
+    background-color:#215828;
     color:rgb(255, 255, 255);
     padding: 15px 0px;
 }
@@ -34,34 +34,7 @@ nav.onglets.a{
 header{
     margin-top: 30px;
 }
-header h1{
-    font-size: 65px;
-    padding-left:30px;
-    text-align: left;
-}
-header h2{
-    font-size: 40px;
-    padding-left:100px;
-    text-align: left;
-}
-header h3{
-    font-size: 40px;
-    padding-left:100px;
-    text-align: left;
-}
-header h4{
-    font-size: 20px 30px;
-    text-align: left;
-}
-header h5{
-    font-size: 40px;
-    padding-left:100px;
-    text-align: left;
-}
-header h6{
-    font-size: 20px 30px;
-    text-align: left;
-}
+
 
 
 /*footer*/

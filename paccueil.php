@@ -14,9 +14,9 @@
 
 <nav>
     <div class="onglets">
-<a href="pgraphs.html">My Consumption</a>
-<a href="psolution.html">Advices and solutions</a>
-<a href="">My Profile</a>
+    <a href="pgraphs.html" style="color: beige;">My Consumption </a>
+<a href="psolution.html" style="color: beige;">Advices and solutions</a>
+<a href="plogin.php" style="color: beige;">My Profile</a>
     </div>
     <div class="boutons">
         <button class="ceci est un bouton">See graphs of other companies</button>
@@ -38,12 +38,13 @@
 
 
 <header>
-    <h1>Hello company <?php echo $nomConnexion?>. We analyzed your datas.  Now you can see our graphs advices and solutions.</h1>
+    <h1>Hello company <?php echo $nomConnexion?>. </h1>
+    <h3>We analyzed your datas.  Now you can see our graphs advices and solutions.</h3>
 </header>
 </section>
 
 <footer>
-    <h5>Contact us </h5>
+    <h3>Contact us </h3>
     <div class="colonnes">
     <div class="colonne"> 
         <p>E-mail</p>
@@ -54,7 +55,7 @@
         <p>+33-1-76-45-29-72</p>
     </div>
     <div class="colonne"> 
-        <p>Adress</p>
+        <p>Location</p>
         <p>10 rue Sexius Michel, 75015, Paris</p>
     </div>
     <div class="colonne"> 
@@ -64,7 +65,6 @@
     
 </div>
 
-<p>Leseche, Martinet, Vittiglio</p>
 
 </footer>
 
