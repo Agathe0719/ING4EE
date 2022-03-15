@@ -5,7 +5,9 @@ body{
     font-size:x-large;
     padding:0;
     margin:0;
-    color: rgb(255, 255, 255);
+    color: black;
+
+        }
 }
 
 nav{
@@ -24,30 +26,22 @@ nav.onglets{
     flex-wrap:wrap;
     /* margin-top: 1%; */
 }
-nav.onglets.a{
-    /* margin-right: 35px; */
-}
 
-/*header*/
-header{
-    /* margin top: 0px; */
-    background:url('https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg');
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:100% 120%;
-    /* margin-bottom: 5%; */
 
-}
 header h1{
     font-size: 45px;
     padding:150px;
-    text-align: center;
 }
 
-header h3{
-    text-align: center;
-
+.header-section {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.header-section > div {
+    width: calc(100% / 2);
+}
+
 /*footer*/
 footer{
     padding: 0.4% 3%;

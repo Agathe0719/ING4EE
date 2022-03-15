@@ -14,9 +14,7 @@
 
 <nav>
     <div class="onglets">
-    <a href="pgraphs.html" style="color: beige;">My Consumption </a>
-<a href="psolution.html" style="color: beige;">Advices and solutions</a>
-<a href="plogin.php" style="color: beige;">My Profile</a>
+    <a href="plogin.php" style="color: beige;"> Login </a>
     </div>
     <div class="boutons">
         <button class="ceci est un bouton">See graphs of other companies</button>
@@ -24,23 +22,12 @@
 </nav>
 
 
-<!-- tester si l'utilisateur est connecté -->
-<?php
-                session_start();
-                if($_SESSION['nomConnexion'] !== ""){
-                    $nomConnexion = $_SESSION['nomConnexion'];
-                    // afficher un message
-                    echo "Bonjour $nomConnexion, vous êtes connecté";
-                    
-                }
-            ?>
-            
-
-
-
 <header>
-    <h1>Hello company <?php echo $nomConnexion?>. </h1>
-    <h3>We analyzed your datas.  Now you can see our graphs advices and solutions.</h3>
+    <h1>ACA ENERGY CONSULTING & SOLUTION. </h1>
+    <h3>If you want to improve your company energy consumption, you are in the good consulting team</h3>
+    <br>
+    <br>
+    <br>
 </header>
 </section>
 
