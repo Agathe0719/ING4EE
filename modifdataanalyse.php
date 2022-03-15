@@ -22,18 +22,26 @@
 <?php
 session_start();
 if($_SESSION['nomConnexion'] !== ""){
-    $nomConnexion = $_SESSION['nomConnexion'];}
+    $nomConnexion = $_SESSION['nomConnexion'];
+    $mail = $_SESSION['newemail'];
+    echo 'Le mail est '.$mail.'!';
+  }
+
 else
 {
     $nomConnexion='Test1';
 }
+
+
 //Pour modifier les données d'une entreprise deja enregistree dans sql
 if(isset($_POST['modifyInfomation'])){
         include("connexion.php");
+        echo 'lala';
         if('consoelectot2'!="0")
         {
             $consoelectot = $_POST['consoelectot2'];
             mysqli_query($con,"UPDATE 'conso_entreprise' SET 'ConsoElecTot'='consoelectot2' WHERE 'Company_Name'='$nomConnexion'");
+            echo 'salut';
         }
         // $prixelectot = $_POST['prixelectot'];
         // $consoelecbureau = $_POST['consoelecbureau'];
