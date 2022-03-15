@@ -31,6 +31,7 @@
                     $nomConnexion = $_SESSION['nomConnexion'];
                     // afficher un message
                     echo "Bonjour $nomConnexion, vous êtes connecté";
+                    
                 }
             ?>
             
