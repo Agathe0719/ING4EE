@@ -73,6 +73,7 @@ if(isset($_POST['submitConnexion']))
     $_SESSION['nomConnexion'] = $nomConnexion;
     header('Location: pprofil.php');
     header('Location: paccueil.php');
+    header('Location: modifydataanalyse.php');
     echo "<script language='javascript' type='text/javascript'> location.href='paccueil.php'</script>";
     }
 
