@@ -6,7 +6,16 @@
     <meta name="viewport" content=""width=device=width, initial-scale="1.0">
 	<title>Accueil</title>
 <link rel="stylesheet" href="paccueilconnecte.css">
-
+<style> button {
+  display: inline-block;
+  background-color: beige;
+  border-radius: 20px;
+ color:black;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
 </head>
 <body>
 
@@ -39,14 +48,16 @@
     <h1> HELLO <?php echo $nomConnexion?>. </h1>
     <h3> We analyzed you data so now you can see our graphs, advices and solutions</h3>
     <div class="boutons">
-        <button class="ceci est un bouton"> Update my data </button>
+        <a href="maconso.php">
+            <input type="button" value ="Update my data">
+                </a>
+       
+
     </div>
     <div class="boutons">
         <button class="ceci est un bouton"> See our advices & solution </button>
     </div>
    
-
-
     </div>
 
     <div class="header-section-2">

@@ -6,7 +6,16 @@
    <meta name="viewport" content=""width=device=width, initial-scale="1.0">
    <title>Accueil</title>
 <link rel="stylesheet" href="paccueil.css">
- 
+<style> button {
+  display: inline-block;
+  background-color: beige;
+  border-radius: 20px;
+ color:black;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
 </head>
 <body>
  
@@ -16,7 +25,7 @@
    <div class="onglets">
    <a href="plogin.php" style="color: beige;"> Login </a>
    </div>
-   <div class="boutons">
+   <div class="button">
        <button class="ceci est un bouton">See graphs of other companies</button>
    </div>
 </nav>
