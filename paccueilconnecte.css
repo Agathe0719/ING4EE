@@ -5,11 +5,11 @@ body{
     font-size:x-large;
     padding:0;
     margin:0;
-    color: rgb(255, 255, 255);
+    color: black;
+
+        }
 }
-body.page{
-    margin: 20px 80px;
-}
+
 nav{
     display: flex;
     flex-wrap:wrap;
@@ -18,34 +18,35 @@ nav{
     top: 0;
     background-color:#215828;
     color:rgb(255, 255, 255);
-    padding: 15px 0px;
+    padding: 1.5% 2%;
 }
 
 nav.onglets{
     display: flex;
     flex-wrap:wrap;
-    margin-top: 10px;
-}
-nav.onglets.a{
-    margin-right: 35px;
-}
-
-/*header*/
-header{
-    margin-top: 30px;
-    background-image: url('https://cdn.pixabay.com/photo/2021/01/17/10/21/sustainability-icons-5924492_960_720.png');
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:300px;
+    /* margin-top: 1%; */
 }
 
 
+header h1{
+    font-size: 45px;
+    padding:150px;
+}
+
+.header-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-section > div {
+    width: calc(100% / 2);
+}
 
 /*footer*/
 footer{
-    padding: 30px 110px;
+    padding: 0.4% 3%;
     background-color: black;
-    font-size: 13px;
+    font-size: 60%;
     color: rgba(245, 245, 220, 0.692);
 }
 

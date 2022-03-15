@@ -12,10 +12,16 @@
     }
     
     .flex-container > div {
-      background-color: #f1f1f1;
-      margin: 10px;
-      padding: 20px;
-      font-size: 60px;
+      background-color: #000000;
+      margin: 30px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      padding: 30px;
+      border-radius: 25px;
+      font-size: 40px;
+      flex-wrap: wrap;
+      
+     
     }
     </style>
 </head>
@@ -37,9 +43,10 @@
 
 <header>
         <div class="flex-container">
-            <div>Solution 1: Earn Money</div>
-            <div>Solution 2: Environment first</div>
-            <div>Solution 3: Both</div>  
+            <div onclick="window.location.href = 'psolution1.php';">Solution 1: Earn Money</div>
+            <div onclick="window.location.href = 'psolution2.php';">Solution 2: Environment first</div>
+            <div onclick="window.location.href = 'psolution3.php';">Solution 3: Both</div> 
+            <input type="submit" value="" name="choice"> 
           </div>
 
 </header>
