@@ -102,7 +102,7 @@ if($_SESSION['nomConnexion'] !== ""){
       if($count!=0) // nom d'utilisateur et mot de passe correctes
        {
          //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise
-         
+
           $_SESSION['nomConnexion'] = $nomConnexion;
           $requete2 = "SELECT * FROM conso_entreprise where Company_Name = '".$nomConnexion."' ";
           $exec_requete2 = mysqli_query($con,$requete2);
@@ -119,7 +119,9 @@ if($_SESSION['nomConnexion'] !== ""){
           //echo 'prix petrole tot'.$_SESSION['PrixPetrolTot'].'';
           //header('Location: paccueil.php');
 
-  }
+      }
+      else
+      {echo 'Pensez a rentrer les informations de votre entreprise';}
 }
   
   }
