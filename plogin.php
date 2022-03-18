@@ -117,11 +117,20 @@ if($_SESSION['nomConnexion'] !== ""){
           $_SESSION['PrixPetrolTot'] = $tab_user->PrixPetrolTot;
           
           //echo 'prix petrole tot'.$_SESSION['PrixPetrolTot'].'';
-          //header('Location: paccueil.php');
+          header('Location: paccueilconnecte.php');
 
       }
       else
-      {echo 'Pensez a rentrer les informations de votre entreprise';}
+      {echo 'Pensez a rentrer les informations de votre entreprise';
+        $_SESSION['consoElecTot'] = "";
+        $_SESSION['PrixElecTot'] = "";
+        $_SESSION['ConsoElecBureau'] = "";
+        $_SESSION['PrixElecBureau'] = "";
+        $_SESSION['ConsoProdElec'] = "";
+        $_SESSION['PrixProdElec'] = "";
+        $_SESSION['consoPetrolTot'] = "";
+        $_SESSION['PrixPetrolTot'] = "";
+      }
 }
   
   }
