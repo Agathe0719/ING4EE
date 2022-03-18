@@ -92,11 +92,14 @@ if(isset($_POST['nombouton']))
 
 <nav>
     <div class="onglets">
-    <a style="color: beige;"> coucou <?php echo $nomConnexion?> </a>
+    <a style="color: beige;"> Welcome <?php echo $nomConnexion?> </a>
     </div>
     <div class="button">
         <button class="ceci est un bouton"> Log out </button>
     </div>
+    <div class="button">
+       <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
+   </div>
 
 </nav>
 
@@ -109,16 +112,12 @@ if(isset($_POST['nombouton']))
     <h1> HELLO <?php echo $nomConnexion?>. </h1>
     <h3> We analyzed you data so now you can see our graphs, advices and solutions</h3>
 
-    <div class="boutons">
-        <a href="maconso.php">
-            <input type="button" value ="Update my data">
-                </a>
-       
-
+    <div class="button">
+                <button onclick="window.location.href = 'modifdataanalyse.php';">Update my data</button>
     </div>
 
-    <div class="boutons">
-        <button class="ceci est un bouton"> See our advices & solution </button>
+    <div class="button">
+                <button onclick="window.location.href = 'psolution.php';">See our advices and solution</button>
     </div>
    
     </div>

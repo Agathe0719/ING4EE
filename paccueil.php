@@ -26,7 +26,7 @@
    <a href="plogin.php" style="color: beige;"> Login </a>
    </div>
    <div class="button">
-       <button class="ceci est un bouton">See graphs of other companies</button>
+   <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
    </div>
 </nav>
  
