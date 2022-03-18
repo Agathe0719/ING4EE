@@ -108,7 +108,7 @@ if(isset($_POST['nombouton']))
 <header>
 <div class="header-section">
     <div class="header-section-1">
-    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/money-2696219_960_720.jpg" height="60%" width="100%"/>
+    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/money-2696219_960_720.jpg" height="50%" width="90%"/>
     
     <h3> Your actual solution </h3>
 <h3>What you will have</h3>
