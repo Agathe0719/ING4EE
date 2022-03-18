@@ -20,12 +20,37 @@
 <body>
 
 
-<!-- tester si l'utilisateur est connecté -->
+<!-- si l'utilisateur est connecté -->
  <?php 
         session_start();
         if($_SESSION['nomConnexion'] !== "")
         {
             $nomConnexion = $_SESSION['nomConnexion'];
+
+            //Data for tab
+            if($_SESSION['consoElecTot'] !== "")
+            {
+
+            
+            $consoElecTot=$_SESSION['consoElecTot'];
+            $PrixElecTot=$_SESSION['PrixElecTot'];
+            $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
+            $PrixElecBureau=$_SESSION['PrixElecBureau'];
+            $ConsoProdElec=$_SESSION['ConsoProdElec'];
+            $PrixProdElec=$_SESSION['PrixProdElec'];
+            $consoPetrolTot=$_SESSION['consoPetrolTot'];
+            $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
+
+            //Faire le tableau ici
+            }
+
+            else
+            {
+                echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
+            }
+            
+            
+
         }
 ?>
 
@@ -51,9 +76,7 @@ if(isset($_POST['nombouton']))
 
       if($count!=0) // if nom d'utilisateur existe dans la deuxieme table, on vide toutes les sessions
        {
-         //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise
-
-          $_SESSION['nomConnexion'] = $nomConnexion;
+          $_SESSION['nomConnexion'] = "";
           //Table conso
           $_SESSION['consoElecTot'] = "";
           $_SESSION['PrixElecTot'] = "";
@@ -69,12 +92,12 @@ if(isset($_POST['nombouton']))
           $_SESSION['Phone'] = "";
           $_SESSION['id'] = "";
           
-          //echo 'prix petrole tot'.$_SESSION['PrixPetrolTot'].'';
+          //Send on paccueil, page which everybody has access
           header('Location: paccueil.php');
 
       }
       else//Normalement ca va jamais ici
-      {echo 'Pensez a rentrer les informations de votre entreprise';
+      {echo 'Suppression data in code';
         $_SESSION['consoElecTot'] = "";
         $_SESSION['PrixElecTot'] = "";
         $_SESSION['ConsoElecBureau'] = "";
@@ -94,10 +117,9 @@ if(isset($_POST['nombouton']))
     <div class="onglets">
     <a style="color: beige;"> coucou <?php echo $nomConnexion?> </a>
     </div>
-    <div class="button">
+    <div class="boutons">
         <button class="ceci est un bouton"> Log out </button>
     </div>
-
 </nav>
 
 
@@ -108,7 +130,6 @@ if(isset($_POST['nombouton']))
     <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="50%" width="100%"/>
     <h1> HELLO <?php echo $nomConnexion?>. </h1>
     <h3> We analyzed you data so now you can see our graphs, advices and solutions</h3>
-
     <div class="boutons">
         <a href="maconso.php">
             <input type="button" value ="Update my data">
@@ -116,7 +137,6 @@ if(isset($_POST['nombouton']))
        
 
     </div>
-
     <div class="boutons">
         <button class="ceci est un bouton"> See our advices & solution </button>
     </div>
@@ -155,7 +175,7 @@ if(isset($_POST['nombouton']))
                 <div id="chart_div"></div> 
            </h2>
     </div>
-   <br>
+ n  <br>
     <br>
     <br>
 </header>

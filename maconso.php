@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>
-    Vous etes inscrits. Rentrez vos infos
+    Rentrez vos infos
   </title>
   
   <meta charset="UTF-8">
@@ -12,30 +12,20 @@
 </head>
 <body>
 
-<header>
-        <h1>New on this website? Record your datas!</h1>
-</header>
-
-<h3> We will analyse your datas</h3>
-
 
 
 <?php
 
-
+session_start();
+if($_SESSION['nomConnexion'] !== "")
+    { 
+      $nomConnexion = $_SESSION['nomConnexion'];//Recup d'avant ou reentrer le nom
+    }
 //Pour entrer les données (pour une nouvelle entreprise) dans sql
 if(isset($_POST['submitnewInfomation']))
 {
         include("connexion.php");
-        session_start();
-        $nomConnexion = $_POST['nameConnexion'];//Recup d'avant ou reentrer le nom
-        echo 'Texte 1 : '.$nomConnexion.'';
-        
-        //if($_SESSION['nomConnexion'] !== "")
-        //{
-          // $nomConnexion = $_SESSION['nomConnexion'];
-          // echo 'Texte 2 : '.$nomConnexion.'';
-        // } 
+         
         $consoelectot = $_POST['consoelectot'];
         $prixelectot = $_POST['prixelectot'];
         $consoelecbureau = $_POST['consoelecbureau'];
@@ -45,6 +35,7 @@ if(isset($_POST['submitnewInfomation']))
         $consopetroltot = $_POST['consopetroltot'];
         $prixpetroltot = $_POST['prixpetroltot'];
 
+        //Fill mysql
         mysqli_query($con,"INSERT INTO conso_entreprise (Company_Name,consoElecTot,PrixElecTot,ConsoElecBureau,PrixElecBureau,ConsoProdElec,PrixProdElec,consoPetrolTot,PrixPetrolTot) 
             VALUES ('$nomConnexion','$consoelectot','$prixelectot','$consoelecbureau','$consoprodelec','$prixelecbureau','$prixprodelec','$consopetroltot','$prixpetroltot')");
 
@@ -55,9 +46,9 @@ if(isset($_POST['submitnewInfomation']))
             $reponse      = mysqli_fetch_array($exec_requete);
             $count = $reponse['count(*)'];
 
-            if($count!=0) // nom d'utilisateur et mot de passe correctes
+            if($count!=0) // nomCompany bien dans la table
             {
-       //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise
+       //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise on assossie
 
         $_SESSION['nomConnexion'] = $nomConnexion;
         $requete2 = "SELECT * FROM conso_entreprise where Company_Name = '".$nomConnexion."' ";
@@ -84,6 +75,13 @@ if(isset($_POST['submitnewInfomation']))
    // session_start();
 
  ?>
+
+<header>
+        <h1>Hello company <?php echo ''.$nomConnexion.''?> !</h1>
+</header>
+
+<h3> New on this website? Please, record your datas </h3>
+
 
 <!-- <p>Hello company <?php echo 'Le nom de connexion est'.$_SESSION['nomConnexion'].' '?></p> -->
 

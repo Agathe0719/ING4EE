@@ -64,7 +64,6 @@ if(isset($_POST['submitConnexion']))
   $sql = mysqli_query($con, "SELECT * FROM user WHERE Company_Name = '$nomConnexion' and Password = '$Password'");
   $nbline = mysqli_num_rows($sql);      
   
-  
 // Si la connection est ok, passage à la page suivante, page d'accueil
   if($nbline==1)
     {//Pour la table USER
@@ -73,7 +72,7 @@ if(isset($_POST['submitConnexion']))
       $exec_requete = mysqli_query($con,$requete);
       $reponse      = mysqli_fetch_array($exec_requete);
       $count = $reponse['count(*)'];
-//reponse
+
       if($count!=0) // nom d'utilisateur et mot de passe correctes
        {
           $_SESSION['nomConnexion'] = $nomConnexion;
@@ -84,25 +83,21 @@ if(isset($_POST['submitConnexion']))
           $_SESSION['newemail'] = $tab_user->Email;
           $_SESSION['Phone'] = $tab_user->Phone;
           $_SESSION['id'] = $tab_user->ID;
-          
-         
-
-    //echo "<script language='javascript' type='text/javascript'> location.href='paccueil.php'</script>";
+               
+          //echo "<script language='javascript' type='text/javascript'> location.href='paccueil.php'</script>";
     
   //Chargement de la table CONSO_ENTREPRISE
-if($_SESSION['nomConnexion'] !== ""){
-    $nomConnexion = $_SESSION['nomConnexion'];
+          if($_SESSION['nomConnexion'] !== ""){
+          $nomConnexion = $_SESSION['nomConnexion'];
     
-    $requete = "SELECT count(*) FROM conso_entreprise where 
-    Company_Name = '".$nomConnexion."' ";
-    $exec_requete = mysqli_query($con,$requete);
-    $reponse      = mysqli_fetch_array($exec_requete);
-    $count = $reponse['count(*)'];
-//reponse
-      if($count!=0) // nom d'utilisateur et mot de passe correctes
-       {
-         //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise
+          $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = '".$nomConnexion."' ";
+          $exec_requete = mysqli_query($con,$requete);
+          $reponse      = mysqli_fetch_array($exec_requete);
+          $count = $reponse['count(*)'];
 
+      if($count!=0) // nom d'utilisateur exist in the table
+       {
+         
           $_SESSION['nomConnexion'] = $nomConnexion;
           $requete2 = "SELECT * FROM conso_entreprise where Company_Name = '".$nomConnexion."' ";
           $exec_requete2 = mysqli_query($con,$requete2);
@@ -120,7 +115,7 @@ if($_SESSION['nomConnexion'] !== ""){
           header('Location: paccueilconnecte.php');
 
       }
-      else
+      else //Est ce que ca sert a quelque chose ?
       {echo 'Pensez a rentrer les informations de votre entreprise';
         $_SESSION['consoElecTot'] = "";
         $_SESSION['PrixElecTot'] = "";
@@ -130,6 +125,7 @@ if($_SESSION['nomConnexion'] !== ""){
         $_SESSION['PrixProdElec'] = "";
         $_SESSION['consoPetrolTot'] = "";
         $_SESSION['PrixPetrolTot'] = "";
+        header('Location: paccueilconnecte.php');
       }
 }
   
