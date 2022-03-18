@@ -19,26 +19,90 @@
 </head>
 <body>
 
+
+<!-- tester si l'utilisateur est connecté -->
+ <?php 
+        session_start();
+        if($_SESSION['nomConnexion'] !== "")
+        {
+            $nomConnexion = $_SESSION['nomConnexion'];
+        }
+?>
+
 <section class="page">
+
+
+<!-- LOG OUT
+<?php 
+if(isset($_POST['nombouton']))
+{
+  include("connexion.php");
+  session_start();
+  $nomConnexion = $_POST['nomConnexion'];
+
+  if($_SESSION['nomConnexion'] !== ""){
+    $nomConnexion = $_SESSION['nomConnexion'];
+    
+    $requete = "SELECT count(*) FROM conso_entreprise where 
+    Company_Name = '".$nomConnexion."' ";
+    $exec_requete = mysqli_query($con,$requete);
+    $reponse      = mysqli_fetch_array($exec_requete);
+    $count = $reponse['count(*)'];
+
+      if($count!=0) // if nom d'utilisateur existe dans la deuxieme table, on vide toutes les sessions
+       {
+         //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise
+
+          $_SESSION['nomConnexion'] = $nomConnexion;
+          //Table conso
+          $_SESSION['consoElecTot'] = "";
+          $_SESSION['PrixElecTot'] = "";
+          $_SESSION['ConsoElecBureau'] = "";
+          $_SESSION['PrixElecBureau'] = "";
+          $_SESSION['ConsoProdElec'] = "";
+          $_SESSION['PrixProdElec'] = "";
+          $_SESSION['consoPetrolTot'] = "";
+          $_SESSION['PrixPetrolTot'] = "";
+        //Table user
+          $_SESSION['password'] ="";
+          $_SESSION['newemail'] = "";
+          $_SESSION['Phone'] = "";
+          $_SESSION['id'] = "";
+          
+          //echo 'prix petrole tot'.$_SESSION['PrixPetrolTot'].'';
+          header('Location: paccueil.php');
+
+      }
+      else//Normalement ca va jamais ici
+      {echo 'Pensez a rentrer les informations de votre entreprise';
+        $_SESSION['consoElecTot'] = "";
+        $_SESSION['PrixElecTot'] = "";
+        $_SESSION['ConsoElecBureau'] = "";
+        $_SESSION['PrixElecBureau'] = "";
+        $_SESSION['ConsoProdElec'] = "";
+        $_SESSION['PrixProdElec'] = "";
+        $_SESSION['consoPetrolTot'] = "";
+        $_SESSION['PrixPetrolTot'] = "";
+      }
+}
+}
+?>
+
+-->
 
 <nav>
     <div class="onglets">
-    <a style="color: beige;"> coucou <?php echo $nomConnexion?> </a>
+    <a style="color: beige;"> Welcome <?php echo $nomConnexion?> </a>
     </div>
-    <div class="boutons">
+    <div class="button">
         <button class="ceci est un bouton"> Log out </button>
     </div>
+    <div class="button">
+       <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
+   </div>
+
 </nav>
 
-<!-- tester si l'utilisateur est connecté -->
- <!-- <?php 
-                // session_start();
-                // if($_SESSION['nomConnexion'] !== ""){
-                    // $nomConnexion = $_SESSION['nomConnexion'];
-                    // afficher un message
-                    //  echo "Bonjour $nomConnexion, vous êtes connecté";
-                //  }
-            // ?>-->
 
 
 <header>
@@ -47,15 +111,13 @@
     <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="50%" width="100%"/>
     <h1> HELLO <?php echo $nomConnexion?>. </h1>
     <h3> We analyzed you data so now you can see our graphs, advices and solutions</h3>
-    <div class="boutons">
-        <a href="maconso.php">
-            <input type="button" value ="Update my data">
-                </a>
-       
 
+    <div class="button">
+                <button onclick="window.location.href = 'modifdataanalyse.php';">Update my data</button>
     </div>
-    <div class="boutons">
-        <button class="ceci est un bouton"> See our advices & solution </button>
+
+    <div class="button">
+                <button onclick="window.location.href = 'psolution.php';">See our advices and solution</button>
     </div>
    
     </div>
@@ -92,7 +154,7 @@
                 <div id="chart_div"></div> 
            </h2>
     </div>
- n  <br>
+   <br>
     <br>
     <br>
 </header>
