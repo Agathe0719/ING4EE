@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content=""width=device=width, initial-scale="1.0">
 	<title>Accueil</title>
-<link rel="stylesheet" href="paccueilconnecte2.css">
+<link rel="stylesheet" href="paccueilconnecte.css">
 <style> button {
   display: inline-block;
   background-color: beige;
   border-radius: 20px;
-  color:black;
+ color:black;
   text-align: center;
   font-size: 20px;
   cursor: pointer;
@@ -18,63 +18,142 @@
 </head>
 
 <header>
+<!-- si l'utilisateur est connecté -->
+<?php 
+        session_start();
+        if($_SESSION['nomConnexion'] !== "")
+        {
+            $nomConnexion = $_SESSION['nomConnexion'];
+
+            //Data for tab
+            if($_SESSION['consoElecTot'] !== "")
+            {
+
+            
+            $consoElecTot=$_SESSION['consoElecTot'];
+            $PrixElecTot=$_SESSION['PrixElecTot'];
+            $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
+            $PrixElecBureau=$_SESSION['PrixElecBureau'];
+            $ConsoProdElec=$_SESSION['ConsoProdElec'];
+            $PrixProdElec=$_SESSION['PrixProdElec'];
+            $consoPetrolTot=$_SESSION['consoPetrolTot'];
+            $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
+
+            //Faire le tableau ici
+            }
+
+            else
+            {
+                echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
+            }
+            
+            
+
+        }
+?>
+
+<!-- <section class="page"> -->
+
+
+<!-- LOG OUT
+<?php 
+if(isset($_POST['nombouton']))
+{
+  include("connexion.php");
+  session_start();
+  $nomConnexion = $_POST['nomConnexion'];
+
+  if($_SESSION['nomConnexion'] !== ""){
+    $nomConnexion = $_SESSION['nomConnexion'];
+    
+    $requete = "SELECT count(*) FROM conso_entreprise where 
+    Company_Name = '".$nomConnexion."' ";
+    $exec_requete = mysqli_query($con,$requete);
+    $reponse      = mysqli_fetch_array($exec_requete);
+    $count = $reponse['count(*)'];
+
+      if($count!=0) // if nom d'utilisateur existe dans la deuxieme table, on vide toutes les sessions
+       {
+          $_SESSION['nomConnexion'] = "";
+          //Table conso
+          $_SESSION['consoElecTot'] = "";
+          $_SESSION['PrixElecTot'] = "";
+          $_SESSION['ConsoElecBureau'] = "";
+          $_SESSION['PrixElecBureau'] = "";
+          $_SESSION['ConsoProdElec'] = "";
+          $_SESSION['PrixProdElec'] = "";
+          $_SESSION['consoPetrolTot'] = "";
+          $_SESSION['PrixPetrolTot'] = "";
+        //Table user
+          $_SESSION['password'] ="";
+          $_SESSION['newemail'] = "";
+          $_SESSION['Phone'] = "";
+          $_SESSION['id'] = "";
+          
+          //Send on paccueil, page which everybody has access
+          header('Location: paccueil.php');
+
+      }
+      else//Normalement ca va jamais ici
+      {echo 'Suppression data in code';
+        $_SESSION['consoElecTot'] = "";
+        $_SESSION['PrixElecTot'] = "";
+        $_SESSION['ConsoElecBureau'] = "";
+        $_SESSION['PrixElecBureau'] = "";
+        $_SESSION['ConsoProdElec'] = "";
+        $_SESSION['PrixProdElec'] = "";
+        $_SESSION['consoPetrolTot'] = "";
+        $_SESSION['PrixPetrolTot'] = "";
+      }
+}
+}
+?>
+
+-->
 
 <nav>
     <div class="onglets">
-    <a style="color: beige;"> coucou <?php echo $nomConnexion?> </a>
+    <a style="color: beige;"> Welcome <?php echo $nomConnexion?> </a>
     </div>
     <div class="boutons">
         <button class="ceci est un bouton"> Log out </button>
     </div>
 </nav>
-
-<!-- tester si l'utilisateur est connecté -->
- <!-- <?php 
-                // session_start();
-                // if($_SESSION['nomConnexion'] !== ""){
-                    // $nomConnexion = $_SESSION['nomConnexion'];
-                    // afficher un message
-                    //  echo "Bonjour $nomConnexion, vous êtes connecté";
-                //  }
-            // ?>-->
-
-
-
-
-
 </header>
 
 
 <body>
 
-<!-- <section class="page"> -->
-
 <div class="container">
 
     <div class="left">
-        <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="100%" width="100%"/>
-        
-        <div class="inside-left">
-            <h1> HELLO <?php echo $nomConnexion?>. </h1>
-            <p> We analyzed you data so now you can see our graphs, advices and solutions</p>
-            <div class="boutons">
-            <a href="maconso.php">
-                <input type="button" value ="Update my data">
-            </a>
-            </div>
-            <div class="boutons">
-            <a href="psolution.html">
-                <input type="button" value ="See our advices & solutions">
-             </a>
-       
-            </div>
+      <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="100%" width="100%"/>
+      <div class="inside-left-text">
+        <h1> HELLO <?php echo $nomConnexion?>. </h1>
+        <p> We analyzed you data so now you can see our graphs, advices and solutions</p>
+      
+      </div>
+      
+      <div class="inside-left-button">
+        <div class="button">
+              <button onclick="window.location.href = 'modifdataanalyse.php';">Update my data</button>
         </div>
+
+        <div class="button">
+              <button onclick="window.location.href = 'psolution.php';">See our advices and solution</button>
+        </div>
+      
+      </div>
+      
     </div>
 
     <div class="right">
-        <h2>
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <script type="text/javascript">
+      <div class="inside-right">
+        
+      </div>
+      <h2>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
         
               google.charts.load('current', {'packages':['corechart']});
         
@@ -92,22 +171,19 @@
                   
                 ]);
         
-                var options = {'title':'Average NRJ consumption of your different department  on 1 year',
-                               'width':500,
-                               'height':400};
+              var options = {'title':'Average NRJ consumption of your different department  on 1 year',
+                               'width':600,
+                               'height':600};
         
-                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
+              var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+              chart.draw(data, options);
               }
-            </script>
-                <div id="chart_div"></div> 
-        </h2>
+          </script>
+              <div id="chart_div"></div> 
+      </h2>
     </div>
-    <br>
-    <br>
-    <br>
-<!-- </section> -->
-</div>
+  </div>
+</section>
 
 </body>
 
@@ -137,5 +213,4 @@
 
 </footer>
 
-    
 </html>

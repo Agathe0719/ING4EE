@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 body{
-
     font-family: 'Fredoka', sans-serif;
     background-color: #ffff;
     font-size:x-large;
     padding:0;
     margin:0;
     color: black;
-}
+        }
+
 
 nav{
     display: flex;
@@ -16,20 +16,20 @@ nav{
     position: sticky;
     top: 0;
     background-color:#215828;
-    color:black;
+    color:rgb(255, 255, 255);
     padding: 1.5% 2%;
 }
 
 nav.onglets{
     display: flex;
     flex-wrap:wrap;
-    /* margin-top: 1%; */
+     margin-top: 1%; 
 }
+
 
 .container{
     display: flex;
     width: 100%;
-
 
 }
 
@@ -45,31 +45,29 @@ nav.onglets{
     float: right;
     width: 50%;
 }
-.inside-left{
+.inside-left-text{
     position: absolute;
     top: 25%;
     bottom: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-  
+    transform: translate(-50%, -50%);   
+}
+.inside-left-button{
+    position: absolute;
+    top: 75%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+/* .inside-right{
     
-}
+    position: absolute;
+    top: 75%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
 
-/* header h1{
-    font-size: 45px;
-    padding:150px;
-}
-
-.header-section {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.header-section > div {
-    width: calc(100% / 2);
 } */
-
-
 
 
 /*footer*/
