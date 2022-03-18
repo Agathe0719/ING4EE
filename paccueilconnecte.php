@@ -25,9 +25,10 @@
     <div class="onglets">
     <a style="color: beige;"> coucou <?php echo $nomConnexion?> </a>
     </div>
-    <div class="boutons">
+    <div class="button">
         <button class="ceci est un bouton"> Log out </button>
     </div>
+
 </nav>
 
 <!-- tester si l'utilisateur est connecté -->
@@ -47,6 +48,7 @@
     <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="50%" width="100%"/>
     <h1> HELLO <?php echo $nomConnexion?>. </h1>
     <h3> We analyzed you data so now you can see our graphs, advices and solutions</h3>
+
     <div class="boutons">
         <a href="maconso.php">
             <input type="button" value ="Update my data">
@@ -54,6 +56,7 @@
        
 
     </div>
+
     <div class="boutons">
         <button class="ceci est un bouton"> See our advices & solution </button>
     </div>
@@ -92,7 +95,7 @@
                 <div id="chart_div"></div> 
            </h2>
     </div>
- n  <br>
+   <br>
     <br>
     <br>
 </header>
