@@ -17,11 +17,10 @@
 }
 </style>
 </head>
-<body>
 
-
+<header>
 <!-- si l'utilisateur est connecté -->
- <?php 
+<?php 
         session_start();
         if($_SESSION['nomConnexion'] !== "")
         {
@@ -54,7 +53,7 @@
         }
 ?>
 
-<section class="page">
+<!-- <section class="page"> -->
 
 
 <!-- LOG OUT
@@ -120,15 +119,21 @@ if(isset($_POST['nombouton']))
     <div class="boutons">
         <button class="ceci est un bouton"> Log out </button>
     </div>
+<<<<<<< HEAD
 
     <div class="button">
        <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
    </div>
 
+=======
+>>>>>>> 509fce0216e80e3f5d70f9aaed3c2092803635e9
 </nav>
+</header>
 
 
+<body>
 
+<<<<<<< HEAD
 <header>
 <div class="header-section">
     <div class="header-section-1">
@@ -144,12 +149,36 @@ if(isset($_POST['nombouton']))
                 <button onclick="window.location.href = 'psolution.php';">See our advices and solution</button>
     </div>
    
+=======
+<div class="container">
+
+    <div class="left">
+      <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="100%" width="100%"/>
+      <div class="inside-left-text">
+        <h1> HELLO <?php echo $nomConnexion?>. </h1>
+        <p> We analyzed you data so now you can see our graphs, advices and solutions</p>
+      
+      </div>
+      
+      <div class="inside-left-button">
+        <div class="button">
+              <button onclick="window.location.href = 'modifdataanalyse.php';">Update my data</button>
+        </div>
+
+        <div class="button">
+              <button onclick="window.location.href = 'psolution.php';">See our advices and solution</button>
+        </div>
+      
+      </div>
+      
+>>>>>>> 509fce0216e80e3f5d70f9aaed3c2092803635e9
     </div>
 
-    <div class="header-section-2">
-    <h2>
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <script type="text/javascript">
+    <div class="right">
+      <div class="inside-right">
+      <h2>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
         
               google.charts.load('current', {'packages':['corechart']});
         
@@ -167,22 +196,32 @@ if(isset($_POST['nombouton']))
                   
                 ]);
         
-                var options = {'title':'Average NRJ consumption of your different department  on 1 year',
-                               'width':500,
-                               'height':400};
+              var options = {'title':'Average NRJ consumption of your different department  on 1 year',
+                               'width':600,
+                               'height':600};
         
-                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
+              var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+              chart.draw(data, options);
               }
-            </script>
-                <div id="chart_div"></div> 
-           </h2>
+          </script>
+              <div id="chart_div"></div> 
+      </h2>
+
+      </div>
+      
     </div>
+<<<<<<< HEAD
     <br>
     <br>
     <br>
 </header>
+=======
+</div>
+>>>>>>> 509fce0216e80e3f5d70f9aaed3c2092803635e9
 </section>
+
+</body>
+
 
 <footer>
     <h3>Contact us </h3>
@@ -209,5 +248,4 @@ if(isset($_POST['nombouton']))
 
 </footer>
 
-    </body>
 </html>
