@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,6 +117,7 @@ if(isset($_POST['nombouton']))
     </div>
     <div class="boutons">
         <button class="ceci est un bouton"> Log out </button>
+      
     </div>
 </nav>
 </header>
@@ -150,9 +150,45 @@ if(isset($_POST['nombouton']))
 
     <div class="right">
       <div class="inside-right">
-      <h2>
-          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-          <script type="text/javascript">
+        
+      </div>
+   
+                  <!-- si l'utilisateur est connecté -->
+ <?php 
+     //   session_start();
+       
+     //   if($_SESSION['nomConnexion'] !== "")
+    //    {
+        //    $nomConnexion = $_SESSION['nomConnexion'];
+
+            //Data for tab
+        //    if($_SESSION['consoElecTot'] !== "")
+        //   {
+
+            
+            $consoElecTot=110000;
+            $PrixElecTot=4600;
+            $ConsoElecBureau=27500;
+            $PrixElecBureau=1150;
+            $ConsoProdElec=82500;
+            $PrixProdElec=3450;
+            $consoPetrolTot=8400;
+            $PrixPetrolTot=15540;
+
+            //Faire le tableau ici
+          //  }
+
+          //  else
+          //  {
+           //     echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
+           // }
+            
+     //   }
+      
+?>
+<!-- DIAGRAM 1:camembert -->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
         
               google.charts.load('current', {'packages':['corechart']});
         
@@ -161,30 +197,139 @@ if(isset($_POST['nombouton']))
         
                 // Create the data table.
                 var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Place');
-                data.addColumn('number', 'kwH');
+                data.addColumn('string', 'Price');
+                data.addColumn('number', 'euros');
                 data.addRows([
-                  ['Offices', 2],
-                  ['Factory A', 4],
-                  ['Factory B', 3],
-                  
+                  ['Total electicity price',  <?php echo $PrixElecTot?>],
+                  ['Transport price', <?php echo $PrixPetrolTot?>],
                 ]);
         
-              var options = {'title':'Average NRJ consumption of your different department  on 1 year',
-                               'width':600,
-                               'height':600};
+                var options = {'title':'Price repartition (in euros)',
+                               'width':400,
+                               'height':300};
         
-              var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-              chart.draw(data, options);
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
               }
-          </script>
-              <div id="chart_div"></div> 
-      </h2>
+            </script>
+                <div id="chart_div"></div>  
+<!-- DIAGRAM 2 camembert -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+        
+              google.charts.load('current', {'packages':['corechart']});
+        
+              google.charts.setOnLoadCallback(drawChart);
+              function drawChart() {
+        
+                // Create the data table.
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Price');
+                data.addColumn('number', 'euros');
+                data.addRows([
+                  ['Offices',  <?php echo $PrixElecBureau?>],
+                  ['Production', <?php echo $PrixProdElec?>],
+                  ['Transport', <?php echo $PrixPetrolTot?>],
+                ]);
+        
+                var options = {'title':'Price repartition in offices, production and transport(in euros)',
+                               'width':400,
+                               'height':300};
+        
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+              }
+            </script>
+                <div id="chart_div"></div>  
 
-      </div>
-      
+
+  <!-- <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["conso", "kwh", { role: "style" } ],
+        ["Total consumption",  <?php echo $consoElecTot?>, "black"],
+        ["Offices consumption",  <?php echo $ConsoElecBureau?>, "blue"],
+        ["Production consumption",  <?php echo $ConsoProdElec?>, "red"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn:0 ,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Different consumption, in kwh, and associated prices",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>  -->
+
+<!-- diagram double barres -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Type of consumption', 'Consumption', 'Price',],
+          ['Total energy consumption', <?php echo $consoElecTot?>,<?php echo $PrixElecTot?> ],
+          ['Offices consumption', <?php echo $ConsoElecBureau?>, <?php echo $PrixElecBureau?>],
+          ['Production consumption', <?php echo $ConsoProdElec?>, <?php echo $PrixProdElec?>]
+         
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company consumption',
+            subtitle: 'Consumption in kwh and Price in euros',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Type of consumption', 'Consumption', 'Price',],
+          ['Transport consumption', <?php echo $consoPetrolTot?>,<?php echo $PrixPetrolTot?> ],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Transport Company consumption',
+            subtitle: 'Consumption in kwh and Price in euros',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <div id="columnchart_material" style="width: 500px; height: 350px;"></div>  -->
+ 
+     
     </div>
-</div>
+  </div>
 </section>
 
 </body>

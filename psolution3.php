@@ -113,11 +113,50 @@ if(isset($_POST['nombouton']))
     <h3> Your actual solution </h3>
 <h3>What you will have</h3>
 <h3>Advices</h3>
-<h5>eteindre la lumiere blabla</h5>
-       </div>
+<h5>Maybe you can put solar pannels : By the collected solar energy, the installation 
+  will be self-financed and quickly paid back, and can even become a source of income. 
+  The stored energy can be sold to EDF so that in addition to not having to pay for electricity,
+   you can also sell it. The sale of energy amounts to about 50 cents €/kWh knowing that 
+   you pay about 10 to 12 cents €/kWh. The benefits, in the long term, are obviously consequent.</h5>
+      <h5>Our estimation: 20% of the price total of electricity saved</h5> 
+  
+  </div>
 
     <div class="header-section-2">
     <h2>
+    <?php 
+     //   session_start();
+       
+     //   if($_SESSION['nomConnexion'] !== "")
+    //    {
+        //    $nomConnexion = $_SESSION['nomConnexion'];
+
+            //Data for tab
+        //    if($_SESSION['consoElecTot'] !== "")
+        //   {
+
+            
+            $consoElecTot=110000;
+            $PrixElecTot=4600;
+            $ConsoElecBureau=27500;
+            $PrixElecBureau=1150;
+            $ConsoProdElec=82500;
+            $PrixProdElec=3450;
+            $consoPetrolTot=8400;
+            $PrixPetrolTot=15540;
+
+            //Faire le tableau ici
+          //  }
+
+          //  else
+          //  {
+           //     echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
+           // }
+            
+     //   }
+      
+?>
+<!-- DIAGRAM 1:camembert -->
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">
         
@@ -128,24 +167,24 @@ if(isset($_POST['nombouton']))
         
                 // Create the data table.
                 var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Place');
-                data.addColumn('number', 'kwH');
+                data.addColumn('string', 'Price');
+                data.addColumn('number', 'euros');
                 data.addRows([
-                  ['Offices', 2],
-                  ['Factory A', 4],
-                  ['Factory B', 3],
-                  
+                  ['Offices price',  <?php echo $PrixElecBureau?>],
+                  ['Production price', <?php echo $PrixProdElec?>],
+                  ['Transport price', <?php echo $PrixPetrolTot?>],
+                  ['Money saved', <?php echo $PrixElecTot*0.2?>],
                 ]);
         
-                var options = {'title':'Average NRJ consumption of your different department  on 1 year',
-                               'width':500,
-                               'height':400};
+                var options = {'title':'Price repartition (in euros)',
+                               'width':400,
+                               'height':300};
         
                 var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
                 chart.draw(data, options);
               }
             </script>
-                <div id="chart_div"></div> 
+                <div id="chart_div"></div>
            </h2>
     </div>
    <br>
