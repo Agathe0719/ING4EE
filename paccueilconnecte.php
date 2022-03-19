@@ -120,13 +120,11 @@ if(isset($_POST['nombouton']))
     <div class="boutons">
         <button class="ceci est un bouton"> Log out </button>
     </div>
-<<<<<<< HEAD
-=======
+
     <div class="button">
        <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
    </div>
 
->>>>>>> 2d8a724dac04ee80e71c7cc45026ade415a32adc
 </nav>
 
 
@@ -137,17 +135,6 @@ if(isset($_POST['nombouton']))
     <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="50%" width="100%"/>
     <h1> HELLO <?php echo $nomConnexion?>. </h1>
     <h3> We analyzed you data so now you can see our graphs, advices and solutions</h3>
-<<<<<<< HEAD
-    <div class="boutons">
-        <a href="maconso.php">
-            <input type="button" value ="Update my data">
-                </a>
-       
-
-    </div>
-    <div class="boutons">
-        <button class="ceci est un bouton"> See our advices & solution </button>
-=======
 
     <div class="button">
                 <button onclick="window.location.href = 'modifdataanalyse.php';">Update my data</button>
@@ -155,7 +142,6 @@ if(isset($_POST['nombouton']))
 
     <div class="button">
                 <button onclick="window.location.href = 'psolution.php';">See our advices and solution</button>
->>>>>>> 2d8a724dac04ee80e71c7cc45026ade415a32adc
     </div>
    
     </div>
@@ -192,7 +178,7 @@ if(isset($_POST['nombouton']))
                 <div id="chart_div"></div> 
            </h2>
     </div>
- n  <br>
+    <br>
     <br>
     <br>
 </header>
