@@ -44,7 +44,7 @@
 
             else
             {
-                echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
+      //          echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
             }
             
             
