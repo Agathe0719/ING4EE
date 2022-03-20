@@ -55,62 +55,6 @@
 <section class="page">
 
 
-<!-- LOG OUT
-<?php 
-if(isset($_POST['nombouton']))
-{
-  include("connexion.php");
-  session_start();
-  $nomConnexion = $_POST['nomConnexion'];
-
-  if($_SESSION['nomConnexion'] !== ""){
-    $nomConnexion = $_SESSION['nomConnexion'];
-    
-    $requete = "SELECT count(*) FROM conso_entreprise where 
-    Company_Name = '".$nomConnexion."' ";
-    $exec_requete = mysqli_query($con,$requete);
-    $reponse      = mysqli_fetch_array($exec_requete);
-    $count = $reponse['count(*)'];
-
-      if($count!=0) // if nom d'utilisateur existe dans la deuxieme table, on vide toutes les sessions
-       {
-          $_SESSION['nomConnexion'] = "";
-          //Table conso
-          $_SESSION['consoElecTot'] = "";
-          $_SESSION['PrixElecTot'] = "";
-          $_SESSION['ConsoElecBureau'] = "";
-          $_SESSION['PrixElecBureau'] = "";
-          $_SESSION['ConsoProdElec'] = "";
-          $_SESSION['PrixProdElec'] = "";
-          $_SESSION['consoPetrolTot'] = "";
-          $_SESSION['PrixPetrolTot'] = "";
-        //Table user
-          $_SESSION['password'] ="";
-          $_SESSION['newemail'] = "";
-          $_SESSION['Phone'] = "";
-          $_SESSION['id'] = "";
-          
-          //Send on paccueil, page which everybody has access
-          header('Location: paccueil.php');
-
-      }
-      else//Normalement ca va jamais ici
-      {echo 'Suppression data in code';
-        $_SESSION['consoElecTot'] = "";
-        $_SESSION['PrixElecTot'] = "";
-        $_SESSION['ConsoElecBureau'] = "";
-        $_SESSION['PrixElecBureau'] = "";
-        $_SESSION['ConsoProdElec'] = "";
-        $_SESSION['PrixProdElec'] = "";
-        $_SESSION['consoPetrolTot'] = "";
-        $_SESSION['PrixPetrolTot'] = "";
-      }
-}
-}
-?>
-
--->
-
 <nav>
     <div class="onglets">
     <a style="color: beige;"> Welcome <?php echo $nomConnexion?> </a>
@@ -156,40 +100,9 @@ if(isset($_POST['nombouton']))
       <div class="inside-right">
         
       </div>
-   
-                  <!-- si l'utilisateur est connecté -->
- <?php 
-     //   session_start();
-       
-     //   if($_SESSION['nomConnexion'] !== "")
-    //    {
-        //    $nomConnexion = $_SESSION['nomConnexion'];
+  
 
-            //Data for tab
-        //    if($_SESSION['consoElecTot'] !== "")
-        //   {
 
-            
-            $consoElecTot=110000;
-            $PrixElecTot=4600;
-            $ConsoElecBureau=27500;
-            $PrixElecBureau=1150;
-            $ConsoProdElec=82500;
-            $PrixProdElec=3450;
-            $consoPetrolTot=8400;
-            $PrixPetrolTot=15540;
-
-            //Faire le tableau ici
-          //  }
-
-          //  else
-          //  {
-           //     echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
-           // }
-            
-     //   }
-      
-?>
 <!-- DIAGRAM 1:camembert -->
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">

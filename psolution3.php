@@ -20,13 +20,27 @@
 <body>
 
 
-<!-- tester si l'utilisateur est connecté -->
- <?php 
+
+<?php 
         session_start();
         if($_SESSION['nomConnexion'] !== "")
         {
             $nomConnexion = $_SESSION['nomConnexion'];
-        }
+
+
+          if($_SESSION['consoElecTot'] !== "")
+          {
+          $consoElecTot=$_SESSION['consoElecTot'];
+          $PrixElecTot=$_SESSION['PrixElecTot'];
+          $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
+          $PrixElecBureau=$_SESSION['PrixElecBureau'];
+          $ConsoProdElec=$_SESSION['ConsoProdElec'];
+          $PrixProdElec=$_SESSION['PrixProdElec'];
+          $consoPetrolTot=$_SESSION['consoPetrolTot'];
+          $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
+          }
+           
+        }  
 ?>
 
 <section class="page">
@@ -68,38 +82,7 @@
 
     <div class="header-section-2">
     <h2>
-    <?php 
-     //   session_start();
-       
-     //   if($_SESSION['nomConnexion'] !== "")
-    //    {
-        //    $nomConnexion = $_SESSION['nomConnexion'];
-
-            //Data for tab
-        //    if($_SESSION['consoElecTot'] !== "")
-        //   {
-
-            
-            $consoElecTot=110000;
-            $PrixElecTot=4600;
-            $ConsoElecBureau=27500;
-            $PrixElecBureau=1150;
-            $ConsoProdElec=82500;
-            $PrixProdElec=3450;
-            $consoPetrolTot=8400;
-            $PrixPetrolTot=15540;
-
-            //Faire le tableau ici
-          //  }
-
-          //  else
-          //  {
-           //     echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
-           // }
-            
-     //   }
-      
-?>
+    
 <!-- DIAGRAM 1:camembert -->
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">

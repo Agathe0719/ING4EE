@@ -20,82 +20,39 @@
 <body>
 
 
+
 <!-- tester si l'utilisateur est connecté -->
- <?php 
+<?php 
         session_start();
         if($_SESSION['nomConnexion'] !== "")
         {
             $nomConnexion = $_SESSION['nomConnexion'];
-        }
+
+
+          if($_SESSION['consoElecTot'] !== "")
+          {
+          $consoElecTot=$_SESSION['consoElecTot'];
+          $PrixElecTot=$_SESSION['PrixElecTot'];
+          $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
+          $PrixElecBureau=$_SESSION['PrixElecBureau'];
+          $ConsoProdElec=$_SESSION['ConsoProdElec'];
+          $PrixProdElec=$_SESSION['PrixProdElec'];
+          $consoPetrolTot=$_SESSION['consoPetrolTot'];
+          $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
+          }
+           
+        }  
 ?>
 
 <section class="page">
 
-
-<!-- LOG OUT
-<?php 
-if(isset($_POST['nombouton']))
-{
-  include("connexion.php");
-  session_start();
-  $nomConnexion = $_POST['nomConnexion'];
-
-  if($_SESSION['nomConnexion'] !== ""){
-    $nomConnexion = $_SESSION['nomConnexion'];
-    
-    $requete = "SELECT count(*) FROM conso_entreprise where 
-    Company_Name = '".$nomConnexion."' ";
-    $exec_requete = mysqli_query($con,$requete);
-    $reponse      = mysqli_fetch_array($exec_requete);
-    $count = $reponse['count(*)'];
-
-      if($count!=0) // if nom d'utilisateur existe dans la deuxieme table, on vide toutes les sessions
-       {
-         //Trouver une condition qui dit que ca fait ca que si le nom de la company existe dans conso entreprise
-
-          $_SESSION['nomConnexion'] = $nomConnexion;
-          //Table conso
-          $_SESSION['consoElecTot'] = "";
-          $_SESSION['PrixElecTot'] = "";
-          $_SESSION['ConsoElecBureau'] = "";
-          $_SESSION['PrixElecBureau'] = "";
-          $_SESSION['ConsoProdElec'] = "";
-          $_SESSION['PrixProdElec'] = "";
-          $_SESSION['consoPetrolTot'] = "";
-          $_SESSION['PrixPetrolTot'] = "";
-        //Table user
-          $_SESSION['password'] ="";
-          $_SESSION['newemail'] = "";
-          $_SESSION['Phone'] = "";
-          $_SESSION['id'] = "";
-          
-          //echo 'prix petrole tot'.$_SESSION['PrixPetrolTot'].'';
-          header('Location: paccueil.php');
-
-      }
-      else//Normalement ca va jamais ici
-      {echo 'Pensez a rentrer les informations de votre entreprise';
-        $_SESSION['consoElecTot'] = "";
-        $_SESSION['PrixElecTot'] = "";
-        $_SESSION['ConsoElecBureau'] = "";
-        $_SESSION['PrixElecBureau'] = "";
-        $_SESSION['ConsoProdElec'] = "";
-        $_SESSION['PrixProdElec'] = "";
-        $_SESSION['consoPetrolTot'] = "";
-        $_SESSION['PrixPetrolTot'] = "";
-      }
-}
-}
-?>
-
--->
 
 <nav>
     <div class="onglets">
     <a style="color: beige;"> Solution 2: Environement first <?php echo $nomConnexion?> </a>
     </div>
     <div class="button">
-        <button class="ceci est un bouton"> Log out </button>
+      <button onclick="window.location.href = 'logout.php';"> Log out </button>
     </div>
     <div class="button">
        <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
@@ -134,38 +91,8 @@ All companies can do this, which costs from €5,000 to €12,000 for companies 
 
     <div class="header-section-2">
     <h2>
-    <?php 
-     //   session_start();
-       
-     //   if($_SESSION['nomConnexion'] !== "")
-    //    {
-        //    $nomConnexion = $_SESSION['nomConnexion'];
-
-            //Data for tab
-        //    if($_SESSION['consoElecTot'] !== "")
-        //   {
-
-            
-            $consoElecTot=110000;
-            $PrixElecTot=4600;
-            $ConsoElecBureau=27500;
-            $PrixElecBureau=1150;
-            $ConsoProdElec=82500;
-            $PrixProdElec=3450;
-            $consoPetrolTot=8400;
-            $PrixPetrolTot=15540;
-
-            //Faire le tableau ici
-          //  }
-
-          //  else
-          //  {
-           //     echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
-           // }
-            
-     //   }
-      
-?>
+  
+ 
 <!-- DIAGRAM 1:camembert -->
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">
