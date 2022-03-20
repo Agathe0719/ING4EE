@@ -20,43 +20,43 @@ color:black;
 <header>
 <!-- si l'utilisateur est connecté -->
 <?php
-        // session_start();
-        // if($_SESSION['nomConnexion'] !== "")
-        // {
-        //     $nomConnexion = $_SESSION['nomConnexion'];
+        session_start();
+        if($_SESSION['nomConnexion'] !== "")
+        {
+            $nomConnexion = $_SESSION['nomConnexion'];
  
-        //     //Data for tab
-        //     if($_SESSION['consoElecTot'] !== "")
-        //     {
-        //     $consoElecTot=$_SESSION['consoElecTot'];
-        //     $PrixElecTot=$_SESSION['PrixElecTot'];
-        //     $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
-        //     $PrixElecBureau=$_SESSION['PrixElecBureau'];
-        //     $ConsoProdElec=$_SESSION['ConsoProdElec'];
-        //     $PrixProdElec=$_SESSION['PrixProdElec'];
-        //     $consoPetrolTot=$_SESSION['consoPetrolTot'];
-        //     $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
+            //Data for tab
+            if($_SESSION['consoElecTot'] !== "")
+            {
+            $consoElecTot=$_SESSION['consoElecTot'];
+            $PrixElecTot=$_SESSION['PrixElecTot'];
+            $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
+            $PrixElecBureau=$_SESSION['PrixElecBureau'];
+            $ConsoProdElec=$_SESSION['ConsoProdElec'];
+            $PrixProdElec=$_SESSION['PrixProdElec'];
+            $consoPetrolTot=$_SESSION['consoPetrolTot'];
+            $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
  
           
-        //     }
+            }
  
-        //     else
-        //     {
-        //     //    echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
-        //     }
+            else
+            {
+            //    echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
+            }
            
             
  
-        // }
+        }
  
-             $consoElecTot=110000;
-             $PrixElecTot=4600;
-             $ConsoElecBureau=27500;
-             $PrixElecBureau=1150;
-             $ConsoProdElec=82500;
-             $PrixProdElec=3450;
-             $consoPetrolTot=8400;
-             $PrixPetrolTot=15540;
+            //  $consoElecTot=110000;
+            //  $PrixElecTot=4600;
+            //  $ConsoElecBureau=27500;
+            //  $PrixElecBureau=1150;
+            //  $ConsoProdElec=82500;
+            //  $PrixProdElec=3450;
+            //  $consoPetrolTot=8400;
+            //  $PrixPetrolTot=15540;
 ?>
 
 

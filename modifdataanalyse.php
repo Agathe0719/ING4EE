@@ -32,13 +32,13 @@ else//Ne va jamais la normalment
 }
 
 
-//Pour modifier les données d'une entreprise deja enregistree dans sql
+//To modify the data of a company already saved in sql
 if(isset($_POST['modifyInfomation'])){
         include("connexion.php");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
-          //1
-        if(!empty($_POST['consoelectot2']))
+//1
+        if(!empty($_POST['consoelectot2']))//if case non empty : modify sql value with the new value
         {
             $consoelectot = $_POST['consoelectot2'];
             echo ''.$nomConnexion.'';

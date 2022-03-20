@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content=""width=device=width, initial-scale="1.0">
   <title>Accueil</title>
-<link rel="stylesheet" href="pothercompanies1.css">
+<link rel="stylesheet" href="pothercompanies.css">
 <style> button {
   display: inline-block;
   background-color: beige;
@@ -28,117 +28,111 @@ color:black;
 <?php
   //Chargement de la table CONSO_ENTREPRISE 1
          
-    //       $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = 'Bofinder SARL' ";
-    //       $exec_requete = mysqli_query($con,$requete);
-    //       $reponse      = mysqli_fetch_array($exec_requete);
-    //       $count = $reponse['count(*)'];
+          $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = 'Bofinder SARL' ";
+          $exec_requete = mysqli_query($con,$requete);
+          $reponse      = mysqli_fetch_array($exec_requete);
+          $count = $reponse['count(*)'];
 
-    //   if($count!=0)
-    //    {
-    //       $nomConnexion='Bofinder SARL';
-    //       $requete2 = "SELECT * FROM conso_entreprise where Company_Name = 'Bofinder SARL' ";
-    //       $exec_requete2 = mysqli_query($con,$requete2);
-    //       $tab_user     = mysqli_fetch_object($exec_requete2);
-    //       $consoElecTot1 = $tab_user->consoElecTot;
-    //       $PrixElecTot1 = $tab_user->PrixElecTot;
-    //       $ConsoElecBureau1 = $tab_user->ConsoElecBureau;
-    //       $PrixElecBureau1 = $tab_user->PrixElecBureau;
-    //       $ConsoProdElec1 = $tab_user->ConsoProdElec;
-    //       $PrixProdElec1 = $tab_user->PrixProdElec;
-    //       $consoPetrolTot1 = $tab_user->consoPetrolTot;
-    //       $PrixPetrolTot1 = $tab_user->PrixPetrolTot;
+      if($count!=0)
+       {
+          $nomConnexion='Bofinder SARL';
+          $requete2 = "SELECT * FROM conso_entreprise where Company_Name = 'Bofinder SARL' ";
+          $exec_requete2 = mysqli_query($con,$requete2);
+          $tab_user     = mysqli_fetch_object($exec_requete2);
+          $consoElecTot1 = $tab_user->consoElecTot;
+          $PrixElecTot1 = $tab_user->PrixElecTot;
+          $ConsoElecBureau1 = $tab_user->ConsoElecBureau;
+          $PrixElecBureau1 = $tab_user->PrixElecBureau;
+          $ConsoProdElec1 = $tab_user->ConsoProdElec;
+          $PrixProdElec1 = $tab_user->PrixProdElec;
+          $consoPetrolTot1 = $tab_user->consoPetrolTot;
+          $PrixPetrolTot1 = $tab_user->PrixPetrolTot;
 
           
-          //Test cam antoine
-          $nomConnexion1='Bofinder SARL';
-          $consoElecTot1 = '1000';
-          $PrixElecTot1 = '2345';
-          $ConsoElecBureau1 = '3456';
-          $PrixElecBureau1 = '1234';
-          $ConsoProdElec1 = '1234';
-          $PrixProdElec1 = '345';
-          $consoPetrolTot1 ='4567';
-          $PrixPetrolTot1 = '2345';
+          //Test sans sql
+          // $nomConnexion1='Bofinder SARL';
+          // $consoElecTot1 = '1000';
+          // $PrixElecTot1 = '2345';
+          // $ConsoElecBureau1 = '3456';
+          // $PrixElecBureau1 = '1234';
+          // $ConsoProdElec1 = '1234';
+          // $PrixProdElec1 = '345';
+          // $consoPetrolTot1 ='4567';
+          // $PrixPetrolTot1 = '2345';
 
           //echo 'prix petrole tot'.$PrixPetrolTot1.'';
-          //header('Location: paccueilconnecte.php');
-//      }
+          
+     }
 
       //Chargement de la table CONSO_ENTREPRISE 2
          
-  //    $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = '3R' ";
-//      $exec_requete = mysqli_query($con,$requete);
-//       $reponse      = mysqli_fetch_array($exec_requete);
-//       $count = $reponse['count(*)'];
+     $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = '3R' ";
+     $exec_requete = mysqli_query($con,$requete);
+      $reponse      = mysqli_fetch_array($exec_requete);
+      $count = $reponse['count(*)'];
 
-//   if($count!=0)
-//    {
-//       $nomConnexion2='3R';
-//       $requete2 = "SELECT * FROM conso_entreprise where Company_Name = '3R' ";
-//       $exec_requete2 = mysqli_query($con,$requete2);
-//       $tab_user2     = mysqli_fetch_object($exec_requete2);
-//       $consoElecTot2 = $tab_user2->consoElecTot;
-//       $PrixElecTot2 = $tab_user2->PrixElecTot;
-//       $ConsoElecBureau2 = $tab_user2->ConsoElecBureau;
-//       $PrixElecBureau2 = $tab_user2->PrixElecBureau;
-//       $ConsoProdElec2 = $tab_user2->ConsoProdElec;
-//       $PrixProdElec2 = $tab_user2->PrixProdElec;
-//       $consoPetrolTot2 = $tab_user2->consoPetrolTot;
-//       $PrixPetrolTot2 = $tab_user2->PrixPetrolTot;
-      
-//       echo 'prix petrole tot'.$PrixPetrolTot2.'';
-//       echo 'nom co 2 : '.$nomConnexion2.' ';
+  if($count!=0)
+   {
+      $nomConnexion2='3R';
+      $requete2 = "SELECT * FROM conso_entreprise where Company_Name = '3R' ";
+      $exec_requete2 = mysqli_query($con,$requete2);
+      $tab_user2     = mysqli_fetch_object($exec_requete2);
+      $consoElecTot2 = $tab_user2->consoElecTot;
+      $PrixElecTot2 = $tab_user2->PrixElecTot;
+      $ConsoElecBureau2 = $tab_user2->ConsoElecBureau;
+      $PrixElecBureau2 = $tab_user2->PrixElecBureau;
+      $ConsoProdElec2 = $tab_user2->ConsoProdElec;
+      $PrixProdElec2 = $tab_user2->PrixProdElec;
+      $consoPetrolTot2 = $tab_user2->consoPetrolTot;
+      $PrixPetrolTot2 = $tab_user2->PrixPetrolTot;
+     } 
       
 
  //Test cam antoine 2
- $nomConnexion2='3R';
- $consoElecTot2 = '1362';
- $PrixElecTot2 = '333';
- $ConsoElecBureau2 = '567';
- $PrixElecBureau2 = '4444';
- $ConsoProdElec2 = '14';
- $PrixProdElec2 = '3405';
- $consoPetrolTot2 ='47';
- $PrixPetrolTot2 = '350';
-  //}
+//  $nomConnexion2='3R';
+//  $consoElecTot2 = '1362';
+//  $PrixElecTot2 = '333';
+//  $ConsoElecBureau2 = '567';
+//  $PrixElecBureau2 = '4444';
+//  $ConsoProdElec2 = '14';
+//  $PrixProdElec2 = '3405';
+//  $consoPetrolTot2 ='47';
+//  $PrixPetrolTot2 = '350';
+  
 
   //Chargement de la table CONSO_ENTREPRISE 3
          
-//   $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = 'SA Meubles Morin' ";
-//   $exec_requete = mysqli_query($con,$requete);
-//   $reponse      = mysqli_fetch_array($exec_requete);
-//   $count = $reponse['count(*)'];
+  $requete = "SELECT count(*) FROM conso_entreprise where Company_Name = 'SA Meubles Morin' ";
+  $exec_requete = mysqli_query($con,$requete);
+  $reponse      = mysqli_fetch_array($exec_requete);
+  $count = $reponse['count(*)'];
 
-// if($count!=0)
-// {
-//   $nomConnexion3='SA Meubles Morin';
-//   $requete3 = "SELECT * FROM conso_entreprise where Company_Name = 'SA Meubles Morin' ";
-//   $exec_requete3 = mysqli_query($con,$requete3);
-//   $tab_user3     = mysqli_fetch_object($exec_requete3);
-//   $consoElecTot3 = $tab_user3->consoElecTot;
-//   $PrixElecTot3 = $tab_user3->PrixElecTot;
-//   $ConsoElecBureau3 = $tab_user3->ConsoElecBureau;
-//   $PrixElecBureau3 = $tab_user3->PrixElecBureau;
-//   $ConsoProdElec3 = $tab_user3->ConsoProdElec;
-//   $PrixProdElec3 = $tab_user3->PrixProdElec;
-//   $consoPetrolTot3 = $tab_user3->consoPetrolTot;
-//   $PrixPetrolTot3 = $tab_user3->PrixPetrolTot;
-  
-//   echo 'prix petrole tot'.$PrixPetrolTot3.'';
-  
-
-// }
+if($count!=0)
+{
+  $nomConnexion3='SA Meubles Morin';
+  $requete3 = "SELECT * FROM conso_entreprise where Company_Name = 'SA Meubles Morin' ";
+  $exec_requete3 = mysqli_query($con,$requete3);
+  $tab_user3     = mysqli_fetch_object($exec_requete3);
+  $consoElecTot3 = $tab_user3->consoElecTot;
+  $PrixElecTot3 = $tab_user3->PrixElecTot;
+  $ConsoElecBureau3 = $tab_user3->ConsoElecBureau;
+  $PrixElecBureau3 = $tab_user3->PrixElecBureau;
+  $ConsoProdElec3 = $tab_user3->ConsoProdElec;
+  $PrixProdElec3 = $tab_user3->PrixProdElec;
+  $consoPetrolTot3 = $tab_user3->consoPetrolTot;
+  $PrixPetrolTot3 = $tab_user3->PrixPetrolTot;
+}
 
  //Test cam antoine 3
- $nomConnexion3='SA Meubles Morin';
- $consoElecTot3 = '4000';
- $PrixElecTot3 = '235';
- $ConsoElecBureau3 = '123';
- $PrixElecBureau3= '34';
- $ConsoProdElec3 = '1234';
- $PrixProdElec3 = '235';
- $consoPetrolTot3='456';
- $PrixPetrolTot3 = '6666';
+//  $nomConnexion3='SA Meubles Morin';
+//  $consoElecTot3 = '4000';
+//  $PrixElecTot3 = '235';
+//  $ConsoElecBureau3 = '123';
+//  $PrixElecBureau3= '34';
+//  $ConsoProdElec3 = '1234';
+//  $PrixProdElec3 = '235';
+//  $consoPetrolTot3='456';
+//  $PrixPetrolTot3 = '6666';
   
  ?>
 
@@ -159,7 +153,7 @@ color:black;
 
 <body>
   
-<h3> Data of <?php echo $nomConnexion1?>. </h3>
+<h3> Data of <?php echo $nomConnexion?>. </h3>
 
 <h3> Data of <?php echo $nomConnexion2?>. </h3>
 
