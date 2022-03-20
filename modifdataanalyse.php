@@ -16,15 +16,13 @@
         <h1>You have already register your datas ! You can modify them</h1>
 </header>
 
-<h3>Write where you want to change et 0 sinon</h3>
+<h3>Write only where you want to change</h3>
 
 
 <?php
 session_start();
 if($_SESSION['nomConnexion'] !== ""){
     $nomConnexion = $_SESSION['nomConnexion'];
-    $mail = $_SESSION['newemail'];
-    echo 'Le mail est '.$mail.'!';
   }
 
 else//Ne va jamais la normalment
@@ -34,13 +32,13 @@ else//Ne va jamais la normalment
 }
 
 
-//Pour modifier les données d'une entreprise deja enregistree dans sql
+//To modify the data of a company already saved in sql
 if(isset($_POST['modifyInfomation'])){
         include("connexion.php");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
-          //1
-        if(!empty($_POST['consoelectot2']))
+//1
+        if(!empty($_POST['consoelectot2']))//if case non empty : modify sql value with the new value
         {
             $consoelectot = $_POST['consoelectot2'];
             echo ''.$nomConnexion.'';
@@ -63,7 +61,6 @@ if(isset($_POST['modifyInfomation'])){
         {
           $prixelecbureau = $_POST['prixelecbureau'];
           mysqli_query($con,"UPDATE conso_entreprise SET PrixElecBureau='$prixelecbureau' WHERE Company_Name='$nomConnexion'");
-          echo 'salut4';
         }
 // 5
       if(!empty($_POST['consoprodelec']))

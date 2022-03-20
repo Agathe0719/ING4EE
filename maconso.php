@@ -63,16 +63,10 @@ if(isset($_POST['submitnewInfomation']))
         $_SESSION['consoPetrolTot'] = $tab_user->consoPetrolTot;
         $_SESSION['PrixPetrolTot'] = $tab_user->PrixPetrolTot;
         
-        echo 'prix petrole tot'.$_SESSION['PrixElecTot'].'';
-        // header('Location: paccueil.php');
+        header('Location: paccueilconnecte.php');
 
     }
    }
-
-//Pour modifier les données d'une entreprise deja enregistree
-//if(isset($_POST['modifInfomation'])){
-   // include("connexion.php");
-   // session_start();
 
  ?>
 

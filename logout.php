@@ -48,6 +48,7 @@
         $_SESSION['PrixProdElec'] = "";
         $_SESSION['consoPetrolTot'] = "";
         $_SESSION['PrixPetrolTot'] = "";
+        header('Location: paccueil.php');
       }
 }
 

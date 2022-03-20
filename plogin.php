@@ -23,7 +23,7 @@
 
 <header>
 	<h1>
-	Welcome to ACA	
+	Welcome to our website ACA	
  
 	</h1>
 <h5> The website for your energy consumption</h5>
@@ -51,7 +51,7 @@
 
 
 
-  <?php
+<?php
 if(isset($_POST['submitConnexion']))
 {
   $nbline=0;
@@ -60,33 +60,32 @@ if(isset($_POST['submitConnexion']))
   $nomConnexion = $_POST['nomConnexion'];
   $Password = $_POST['password'];
 
-//Si jamais le mdp et l'id correspondent au sql : $nbline=1 sinon 0
+//if password and id correspond to sql : $nbline=1 else 0
   $sql = mysqli_query($con, "SELECT * FROM user WHERE Company_Name = '$nomConnexion' and Password = '$Password'");
   $nbline = mysqli_num_rows($sql);      
   
-// Si la connection est ok, passage à la page suivante, page d'accueil
+// If connection is ok, next page = home page
   if($nbline==1)
-    {//Pour la table USER
+    {//For table USER
       $requete = "SELECT count(*) FROM user where 
       Company_Name = '".$nomConnexion."' and Password = '".$Password."' ";
       $exec_requete = mysqli_query($con,$requete);
       $reponse      = mysqli_fetch_array($exec_requete);
       $count = $reponse['count(*)'];
 
-      if($count!=0) // nom d'utilisateur et mot de passe correctes
+      if($count!=0) //Find the good line of the table mySQL
        {
           $_SESSION['nomConnexion'] = $nomConnexion;
           $requete2 = "SELECT * FROM user where Company_Name = '".$nomConnexion."' ";
           $exec_requete2 = mysqli_query($con,$requete2);
           $tab_user     = mysqli_fetch_object($exec_requete2);
+          //Update of sessions
           $_SESSION['password'] = $tab_user->Password;
           $_SESSION['newemail'] = $tab_user->Email;
           $_SESSION['Phone'] = $tab_user->Phone;
           $_SESSION['id'] = $tab_user->ID;
                
-          //echo "<script language='javascript' type='text/javascript'> location.href='paccueil.php'</script>";
-    
-  //Chargement de la table CONSO_ENTREPRISE
+  //Loading of table CONSO_ENTREPRISE
           if($_SESSION['nomConnexion'] !== ""){
           $nomConnexion = $_SESSION['nomConnexion'];
     
@@ -95,13 +94,14 @@ if(isset($_POST['submitConnexion']))
           $reponse      = mysqli_fetch_array($exec_requete);
           $count = $reponse['count(*)'];
 
-      if($count!=0) // nom d'utilisateur exist in the table
+      if($count!=0) // user name exist in the table, find the good line of mySQL
        {
          
           $_SESSION['nomConnexion'] = $nomConnexion;
           $requete2 = "SELECT * FROM conso_entreprise where Company_Name = '".$nomConnexion."' ";
           $exec_requete2 = mysqli_query($con,$requete2);
           $tab_user     = mysqli_fetch_object($exec_requete2);
+          //Update of sessions
           $_SESSION['consoElecTot'] = $tab_user->consoElecTot;
           $_SESSION['PrixElecTot'] = $tab_user->PrixElecTot;
           $_SESSION['ConsoElecBureau'] = $tab_user->ConsoElecBureau;
@@ -111,11 +111,10 @@ if(isset($_POST['submitConnexion']))
           $_SESSION['consoPetrolTot'] = $tab_user->consoPetrolTot;
           $_SESSION['PrixPetrolTot'] = $tab_user->PrixPetrolTot;
           
-          //echo 'prix petrole tot'.$_SESSION['PrixPetrolTot'].'';
           header('Location: paccueilconnecte.php');
 
       }
-      else //Est ce que ca sert a quelque chose ?
+      else 
       {echo 'Pensez a rentrer les informations de votre entreprise';
         $_SESSION['consoElecTot'] = "";
         $_SESSION['PrixElecTot'] = "";
@@ -125,7 +124,7 @@ if(isset($_POST['submitConnexion']))
         $_SESSION['PrixProdElec'] = "";
         $_SESSION['consoPetrolTot'] = "";
         $_SESSION['PrixPetrolTot'] = "";
-        header('Location: paccueilconnecte.php');
+        header('Location: maconso.php');
       }
 }
   
@@ -134,8 +133,6 @@ if(isset($_POST['submitConnexion']))
 //Si pas effective, message Le mdp ou l'utilisateur est incorrect
 else
 {
- ?>
-
   ?>
  <!-- on ferme php car le texte est en html -->
  <p style='color:red'> MDP incorrect for company <?php echo $nomConnexion?>. Try again</p>
