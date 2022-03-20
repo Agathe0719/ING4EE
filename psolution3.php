@@ -20,36 +20,36 @@
 
 <header>
 <?php 
-        // session_start();
-        // if($_SESSION['nomConnexion'] !== "")
-        // {
-        //     $nomConnexion = $_SESSION['nomConnexion'];
+        session_start();
+        if($_SESSION['nomConnexion'] !== "")
+        {
+            $nomConnexion = $_SESSION['nomConnexion'];
 
-            //Data for tab
-        //    if($_SESSION['consoElecTot'] !== "")
-        //   {
+          //  Data for tab
+           if($_SESSION['consoElecTot'] !== "")
+          {
 
-        //   if($_SESSION['consoElecTot'] !== "")
-        //   {
-        //   $consoElecTot=$_SESSION['consoElecTot'];
-        //   $PrixElecTot=$_SESSION['PrixElecTot'];
-        //   $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
-        //   $PrixElecBureau=$_SESSION['PrixElecBureau'];
-        //   $ConsoProdElec=$_SESSION['ConsoProdElec'];
-        //   $PrixProdElec=$_SESSION['PrixProdElec'];
-        //   $consoPetrolTot=$_SESSION['consoPetrolTot'];
-        //   $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
-        //   }
-             $consoElecTot=110000;
-             $PrixElecTot=4600;
-             $ConsoElecBureau=27500;
-             $PrixElecBureau=1150;
-             $ConsoProdElec=82500;
-             $PrixProdElec=3450;
-             $consoPetrolTot=8400;
-             $PrixPetrolTot=15540;
-
- //       }  
+          if($_SESSION['consoElecTot'] !== "")
+          {
+          $consoElecTot=$_SESSION['consoElecTot'];
+          $PrixElecTot=$_SESSION['PrixElecTot'];
+          $ConsoElecBureau=$_SESSION['ConsoElecBureau'];
+          $PrixElecBureau=$_SESSION['PrixElecBureau'];
+          $ConsoProdElec=$_SESSION['ConsoProdElec'];
+          $PrixProdElec=$_SESSION['PrixProdElec'];
+          $consoPetrolTot=$_SESSION['consoPetrolTot'];
+          $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
+          }
+            //  $consoElecTot=110000;
+            //  $PrixElecTot=4600;
+            //  $ConsoElecBureau=27500;
+            //  $PrixElecBureau=1150;
+            //  $ConsoProdElec=82500;
+            //  $PrixProdElec=3450;
+            //  $consoPetrolTot=8400;
+            //  $PrixPetrolTot=15540;
+      }  
+    }
 ?>
 
 
