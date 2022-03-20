@@ -38,8 +38,7 @@
             $consoPetrolTot=$_SESSION['consoPetrolTot'];
             $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
 
-            //Faire le tableau ici
-
+           
             }
 
             else

@@ -20,8 +20,6 @@
 <body>
 
 
-
-<!-- tester si l'utilisateur est connecté -->
 <?php 
         session_start();
         if($_SESSION['nomConnexion'] !== "")
