@@ -44,23 +44,19 @@ if(isset($_POST['modifyInfomation'])){
         {
             $consoelectot = $_POST['consoelectot2'];
             echo ''.$nomConnexion.'';
-            echo ''.$consoelectot.'';
             mysqli_query($con,"UPDATE conso_entreprise SET ConsoElecTot='$consoelectot' WHERE Company_Name='$nomConnexion'");
-            echo 'salut1';
         }
 //2
         if(!empty($_POST['prixelectot']))
         {
           $prixelectot = $_POST['prixelectot'];
           mysqli_query($con,"UPDATE conso_entreprise SET PrixElecTot='$prixelectot' WHERE Company_Name='$nomConnexion'");
-          echo 'salut2';
         }  
 // 3
         if(!empty($_POST['consoelecbureau']))
         {
             $consoelecbureau = $_POST['consoelecbureau'];
             mysqli_query($con,"UPDATE conso_entreprise SET ConsoElecBureau='$consoelecbureau' WHERE Company_Name='$nomConnexion'");
-            echo 'salut3';
         }
 // 4
         if(!empty($_POST['prixelecbureau']))
@@ -74,7 +70,6 @@ if(isset($_POST['modifyInfomation'])){
         {
             $consoprodelec = $_POST['consoprodelec'];
             mysqli_query($con,"UPDATE conso_entreprise SET ConsoProdElec='$consoprodelec' WHERE Company_Name='$nomConnexion'");
-            echo 'salut5';
         }
 
 // 6
@@ -82,21 +77,18 @@ if(isset($_POST['modifyInfomation'])){
       {
       $prixprodelec = $_POST['prixprodelec'];
       mysqli_query($con,"UPDATE conso_entreprise SET PrixProdElec='$prixprodelec' WHERE Company_Name='$nomConnexion'");
-      echo 'salut6';
       }
 // 7
       if(!empty($_POST['consopetroltot']))
       {
        $consopetroltot = $_POST['consopetroltot'];
        mysqli_query($con,"UPDATE conso_entreprise SET consoPetrolTot='$consopetroltot' WHERE Company_Name='$nomConnexion'");
-       echo 'salut6';
       }
 // 8
       if(!empty($_POST['prixpetroltot']))
       {
       $prixpetroltot = $_POST['prixpetroltot'];
       mysqli_query($con,"UPDATE conso_entreprise SET PrixPetrolTot='$prixpetroltot' WHERE Company_Name='$nomConnexion'");
-      echo 'salut6';
       }
 
 
