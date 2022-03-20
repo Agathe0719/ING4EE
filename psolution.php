@@ -39,6 +39,16 @@
 
 <section class="page">
 
+  
+<?php
+ session_start();
+ if($_SESSION['nomConnexion'] !== "")
+ {
+     $nomConnexion = $_SESSION['nomConnexion'];
+ }
+?>
+
+
 <nav>
     <div class="onglets">
         <a style="color: beige;"> ACA advices and solutions for  <?php echo $nomConnexion?> </a>
@@ -48,7 +58,7 @@
     <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
     </div>
     <div class="button">
-        <button class="ceci est un bouton"> Log out </button>
+        <button onclick="window.location.href = 'logout.php';"> Log out </button>
     </div>
     
 </nav>
