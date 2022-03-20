@@ -23,7 +23,7 @@
 
 <header>
 	<h1>
-	Welcome to ACA	
+	Welcome to our website ACA	
  
 	</h1>
 <h5> The website for your energy consumption</h5>
@@ -73,7 +73,7 @@ if(isset($_POST['submitConnexion']))
       $reponse      = mysqli_fetch_array($exec_requete);
       $count = $reponse['count(*)'];
 
-      if($count!=0) // nom d'utilisateur et mot de passe correctes
+      if($count!=0) // nom d'utilisateur et mot de passe corrects
        {
           $_SESSION['nomConnexion'] = $nomConnexion;
           $requete2 = "SELECT * FROM user where Company_Name = '".$nomConnexion."' ";
@@ -134,8 +134,6 @@ if(isset($_POST['submitConnexion']))
 //Si pas effective, message Le mdp ou l'utilisateur est incorrect
 else
 {
- ?>
-
   ?>
  <!-- on ferme php car le texte est en html -->
  <p style='color:red'> MDP incorrect for company <?php echo $nomConnexion?>. Try again</p>
