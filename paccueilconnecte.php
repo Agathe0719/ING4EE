@@ -119,6 +119,11 @@ if(isset($_POST['nombouton']))
         <button class="ceci est un bouton"> Log out </button>
       
     </div>
+
+    <div class="button">
+       <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
+   </div>
+
 </nav>
 </header>
 
@@ -328,8 +333,11 @@ if(isset($_POST['nombouton']))
     <div id="columnchart_material" style="width: 500px; height: 350px;"></div>  -->
  
      
-    </div>
-  </div>
+</div>
+    <br>
+    <br>
+    <br>
+</header>
 </section>
 
 </body>
