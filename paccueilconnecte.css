@@ -40,11 +40,6 @@ nav.onglets{
     width: 50%;
 
 }
-.right{
-    position: relative; 
-    float: right;
-    width: 50%;
-}
 .inside-left-text{
     position: absolute;
     top: 25%;
@@ -59,15 +54,39 @@ nav.onglets{
     left: 50%;
     transform: translate(-50%, -50%);   
 }
-/* .inside-right{
-    
+
+.right{
+    position: relative; 
+    float: right;
+    width: 50%;
+}
+
+.inside-right-top{
     position: absolute;
-    top: 75%;
+    top: 17%;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%);   
+}
 
-} */
+
+
+.inside-right-bottom-l{
+    position: absolute;
+    top: 60%;
+    bottom: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+
+}
+
+.inside-right-bottom-r{
+    position: absolute;
+    top: 60%;
+    bottom: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%); 
+}
 
 
 /*footer*/
