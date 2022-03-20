@@ -21,10 +21,10 @@
 <header>
 <!-- si l'utilisateur est connecté -->
  <?php 
-        // session_start();
-        // if($_SESSION['nomConnexion'] !== "")
-        // {
-        //     $nomConnexion = $_SESSION['nomConnexion'];
+         session_start();
+         if($_SESSION['nomConnexion'] !== "")
+         {
+             $nomConnexion = $_SESSION['nomConnexion'];
 
         //     //Data for tab
         //     if($_SESSION['consoElecTot'] !== "")
@@ -39,7 +39,7 @@
         //     $PrixPetrolTot=$_SESSION['PrixPetrolTot'];
 
            
-        //     }
+             }
 
         //     else
         //     {
