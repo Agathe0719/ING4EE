@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -67,8 +68,8 @@ if(isset($_POST['submitConnexion']))
 // If connection is ok, next page = home page
   if($nbline==1)
     {//For table USER
-      $requete = "SELECT count(*) FROM user where 
-      Company_Name = '".$nomConnexion."' and Password = '".$Password."' ";
+      //Recupere la bonne ligne du tableau SQL
+      $requete = "SELECT count(*) FROM user where Company_Name = '".$nomConnexion."' and Password = '".$Password."' ";
       $exec_requete = mysqli_query($con,$requete);
       $reponse      = mysqli_fetch_array($exec_requete);
       $count = $reponse['count(*)'];

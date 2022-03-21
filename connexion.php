@@ -1,4 +1,7 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
 <?php
     $con = mysqli_connect("localhost","root","","energy_project");
 

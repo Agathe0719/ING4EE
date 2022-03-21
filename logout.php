@@ -1,4 +1,6 @@
 
+<!DOCTYPE html>
+<html lang="en">
 <?php 
 
   include("connexion.php");
@@ -13,7 +15,7 @@
     $reponse      = mysqli_fetch_array($exec_requete);
     $count = $reponse['count(*)'];
 
-      if($count!=0) // if nom d'utilisateur existe dans la deuxieme table, on vide toutes les sessions
+      if($count!=0) // if user name exist in the second table, empty all sessions
        {
           $_SESSION['nomConnexion'] = "";
           //Table conso
@@ -36,8 +38,8 @@
           session_destroy();
           //Send on paccueil, page which everybody has access
           header('Location: paccueil.php');
-
       }
+      
       else//Normalement ca va jamais ici
       {echo 'Suppression data in code';
         $_SESSION['consoElecTot'] = "";

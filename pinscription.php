@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 
 <?php
 // permet d'enregistrer valeurs dans le code
@@ -7,7 +9,6 @@ $sql = "SELECT Company_Name,Password,Email,Phone from user";
         session_start();
 
         $namecompany = $_POST['namecompany'];
-        // $nameid = $_POST['nameid'];
         $role = $_POST['role'];
         $newemail = $_POST['newemail'];
         $phone = $_POST['phone'];
@@ -26,8 +27,9 @@ $sql = "SELECT Company_Name,Password,Email,Phone from user";
     else{
         mysqli_query($con,"INSERT INTO user (Company_Name,Password,Email,Phone) 
           VALUES ('$namecompany','$role','$newemail','$phone')");
-          echo "<script language='javascript' type='text/javascript'> location.href='plogin.php'</script>";
+          echo "<script> location.href='plogin.php'</script>";
     }
 
     }
 ?>
+
