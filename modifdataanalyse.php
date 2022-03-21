@@ -7,8 +7,7 @@
   </title>
   
   <meta charset="UTF-8">
-  <meta name="viewport" content=""width=device=width, initial-scale="1.0">
-  <title>Information2</title>
+  <meta name="viewport" content="" width=device=width, initial-scale="1.0">
   <link rel="stylesheet" href="pinscription.css">
 
 </head>
@@ -110,7 +109,7 @@ if(isset($_POST['modifyInfomation'])){
 
 
         //Une fois que tout est mis a jour va sur paccueilconnecte, il faudra recharger le nouveau tableau
-        echo "<script language='javascript' type='text/javascript'> location.href='paccueilconnecte.php'</script>";
+        echo "<script> location.href='paccueilconnecte.php'</script>";
         }
        
    
@@ -122,28 +121,28 @@ if(isset($_POST['modifyInfomation'])){
 <form method="POST" class="form">
 
   <div class="form">
-  	<label for="elecConso">Electric consumption: </label>
+  	<label for="consoelectot2">Electric consumption: </label>
     <input type="text" name="consoelectot2" id="consoelectot2" >
     <br>
-    <label for="priceElecConso">Price of electric consumption: </label>
+    <label for="prixelectot">Price of electric consumption: </label>
     <input type="text" name="prixelectot" id="prixelectot" >
     <br>
-    <label for="ConsoElecBureau">Consumption of offices: </label>
+    <label for="consoelecbureau">Consumption of offices: </label>
     <input type="text" name="consoelecbureau" id="consoelecbureau" >
     <br>
-    <label for="role">Price of consumprion of offices: </label>
+    <label for="prixelecbureau">Price of consumprion of offices: </label>
     <input type="text" name="prixelecbureau" id="prixelecbureau" >
     <br>
-    <label for="phone">Consumption of electric production: </label>
+    <label for="consoprodelec">Consumption of electric production: </label>
     <input type="text" name="consoprodelec" id="consoprodelec" >
     <br>
-    <label for="role">Price of consumption of electric production: </label> 
+    <label for="prixprodelec">Price of consumption of electric production: </label> 
     <input type="text" name="prixprodelec" id="prixprodelec" >
     <br>
-    <label for="phone">Consumption of petrol and transport: </label>
+    <label for="consopetroltot">Consumption of petrol and transport: </label>
     <input type="text" name="consopetroltot" id="consopetroltot" >
     <br>
-    <label for="role">Price of consumption petrol and transport: </label>
+    <label for="prixpetroltot">Price of consumption petrol and transport: </label>
     <input type="text" name="prixpetroltot" id="prixpetroltot" >
  
 

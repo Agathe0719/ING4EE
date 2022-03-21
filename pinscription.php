@@ -21,7 +21,7 @@ $sql = "SELECT Company_Name,Password,Email,Phone from user";
               echo "The name of company is already used";
               $sql = "SELECT Company_Name,Password,Email,Phone from user";
         } else {
-              echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
+              echo "Erreur : " . $sql . "<br>" . mysqli_error($con);
         }
     }
     else{

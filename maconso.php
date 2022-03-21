@@ -7,8 +7,7 @@
   </title>
   
   <meta charset="UTF-8">
-  <meta name="viewport" content=""width=device=width, initial-scale="1.0">
-  <title>Information</title>
+  <meta name="viewport" content="" width=device=width, initial-scale="1.0">
   <link rel="stylesheet" href="pinscription.css">
   
 </head>
@@ -84,31 +83,31 @@ if(isset($_POST['submitnewInfomation']))
 <form method="POST" class="form">
 
   <div class="form">
-    <label for="company">Name of your company: </label>
+    <label for="nameConnexion">Name of your company: </label>
   	 <input type="text" name="nameConnexion" id="nameConnexion" required>
   	 <br>
-    <label for="elecConso">Electric consumption: </label>
+    <label for="consoelectot">Electric consumption: </label>
     <input type="text" name="consoelectot" id="consoelectot" required>
     <br>
-    <label for="priceElecConso">Price of electric consumption: </label>
+    <label for="prixelectot">Price of electric consumption: </label>
     <input type="text" name="prixelectot" id="prixelectot" required>
     <br>
-    <label for="ConsoElecBureau">Consumption of offices: </label>
+    <label for="consoelecbureau">Consumption of offices: </label>
     <input type="text" name="consoelecbureau" id="consoelecbureau" required>
     <br>
-    <label for="role">Price of consumprion of offices: </label>
+    <label for="prixelecbureau">Price of consumprion of offices: </label>
     <input type="text" name="prixelecbureau" id="prixelecbureau" required>
     <br>
-    <label for="phone">Consumption of electric production: </label>
+    <label for="consoprodelec">Consumption of electric production: </label>
     <input type="text" name="consoprodelec" id="consoprodelec" required>
     <br>
-    <label for="role">Price of consumption of electric production: </label>
+    <label for="prixprodelec">Price of consumption of electric production: </label>
     <input type="text" name="prixprodelec" id="prixprodelec" required>
     <br>
-    <label for="phone">Consumption of petrol and transport: </label>
+    <label for="consopetroltot">Consumption of petrol and transport: </label>
     <input type="text" name="consopetroltot" id="consopetroltot" required>
     <br>
-    <label for="role">Price of consumption petrol and transport: </label>
+    <label for="prixpetroltot">Price of consumption petrol and transport: </label>
     <input type="text" name="prixpetroltot" id="prixpetroltot" required>
   </div>
   </div>
