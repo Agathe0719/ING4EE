@@ -23,18 +23,15 @@ nav{
 nav.onglets{
     display: flex;
     flex-wrap:wrap;
-    /* margin-top: 1%; */
 }
 
 /*header*/
 header{
 
-    /* margin top: 0px; */
     background:url('https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg');
     background-repeat:no-repeat;
     background-position:center;
     background-size:100% 120%;
-    /* margin-bottom: 5%; */
 
 }
 header h1{

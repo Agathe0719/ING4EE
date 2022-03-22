@@ -19,6 +19,7 @@ $sql = "SELECT Company_Name,Password,Email,Phone from user";
             $sql = "SELECT Company_Name,Password,Email,Phone from user";
             if (mysqli_query($con, $sql)) {
               echo "The name of company is already used";
+              header('Location: pinscription.html');
               $sql = "SELECT Company_Name,Password,Email,Phone from user";
         } else {
               echo "Erreur : " . $sql . "<br>" . mysqli_error($con);

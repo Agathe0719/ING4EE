@@ -123,16 +123,6 @@ if($count!=0)
   $PrixPetrolTot3 = $tab_user3->PrixPetrolTot;
 }
 
- //Test cam antoine 3
-//  $nomConnexion3='SA Meubles Morin';
-//  $consoElecTot3 = '4000';
-//  $PrixElecTot3 = '235';
-//  $ConsoElecBureau3 = '123';
-//  $PrixElecBureau3= '34';
-//  $ConsoProdElec3 = '1234';
-//  $PrixProdElec3 = '235';
-//  $consoPetrolTot3='456';
-//  $PrixPetrolTot3 = '6666';
   
  ?>
 

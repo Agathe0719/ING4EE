@@ -54,15 +54,13 @@
         <a style="color: beige;"> ACA advices and solutions for  <?php echo $nomConnexion?> </a>
       
     </div>
-    <div class="boutons">
-    <button onclick="window.location.href = 'pothercompanies.php';">See graphs of other companies</button>
-    </div>
+    
     <div class="button">
         <button onclick="window.location.href = 'logout.php';"> Log out </button>
     </div>
     
 </nav>
-
+<br><br><br><br><br><br><br>
 <header>
         <div class="flex-container">
             <div onclick="window.location.href = 'psolution1.php';">Solution 1: Earn Money</div>
@@ -72,6 +70,7 @@
           </div>
 
 </header>
+<br><br><br><br><br><br><br>
 </section>
 
 

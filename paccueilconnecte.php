@@ -44,8 +44,6 @@ color:black;
             {
                 echo "<script language='javascript' type='text/javascript'> location.href='maconso.php'</script>";
             }
-           
-            
  
         }
  
@@ -82,7 +80,7 @@ color:black;
 <div class="container">
  
     <div class="left">
-      <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="117%" width="100%"/>
+      <img src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590_960_720.jpg" height="113%" width="100%"/>
       <div class="inside-left-text">
         <h1> HELLO <?php echo $nomConnexion?>. </h1>
         <p> We analyzed you data so now you can see our graphs, advices and solutions</p>
