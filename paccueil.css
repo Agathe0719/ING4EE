@@ -53,8 +53,9 @@ footer{
    background-color: black;
    font-size: 60%;
    color: rgba(245, 245, 220, 0.692);
+   /* position: absolute;
+   bottom: 0; */
 }
- 
 footer .colonnes{
    display: flex;
    flex-wrap: wrap;

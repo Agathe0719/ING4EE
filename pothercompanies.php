@@ -153,11 +153,11 @@ if($count!=0)
 
 <body>
   
-<h3> Data of <?php echo $nomConnexion?>. </h3>
+<h3 style="margin-left : 50px"> Data of <?php echo $nomConnexion?>. </h3>
 
-<h3> Data of <?php echo $nomConnexion2?>. </h3>
+<h3 style="margin-left : 50px"> Data of <?php echo $nomConnexion2?>. </h3>
 
-<h3> Data of <?php echo $nomConnexion3?>. </h3>
+<h3 style="margin-left : 50px"> Data of <?php echo $nomConnexion3?>. </h3>
 <div class="container">
 
 

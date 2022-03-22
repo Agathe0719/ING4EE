@@ -44,6 +44,7 @@
 <footer>
    <h3>Contact us </h3>
    <div class="colonnes">
+   
    <div class="colonne">
        <p>E-mail</p>
        <p>aca@gmail.com</p>
@@ -61,7 +62,7 @@
        <p>About Us</p>
    </div>
   
-</div>
+   </div>
  
  
 </footer>
